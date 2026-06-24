@@ -29,7 +29,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         cta1Href={`/${currentLocale}/sejours`}
         cta2Label={t('heroCta2')}
         cta2Href={`/${currentLocale}/contact`}
-        imageUrl="https://images.unsplash.com/photo-1447684808650-354ae64db5b8?w=1600"
+        imageUrl="/hero.png"
       />
 
       {/* Arguments */}
