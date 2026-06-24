@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 
@@ -41,9 +42,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center">
-            <span className="font-bebas text-3xl text-blanc-casse tracking-widest">
-              DINI <span className="text-rouge-sang">FISHING</span>
-            </span>
+            <Image src="/logo.png" alt="Dini Fishing" width={140} height={48} className="h-10 w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Links */}
