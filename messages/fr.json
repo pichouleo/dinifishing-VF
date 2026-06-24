@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "stays": "Séjours",
+    "accommodation": "Hébergement",
+    "species": "Espèces",
+    "gallery": "Galerie",
+    "blog": "Blog",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "home": {
+    "heroTitle1": "DINI",
+    "heroTitle2": "FISHING",
+    "heroTagline": "Séjours de pêche guidés aux carnassiers",
+    "heroSubtitle": "Valdecaballeros, Extremadura — Espagne",
+    "heroCta1": "Découvrir les séjours",
+    "heroCta2": "Nous contacter",
+    "arguments": {
+      "title": "POURQUOI DINI FISHING ?",
+      "nature": "Nature Préservée",
+      "natureDesc": "Des eaux encore sauvages, loin du tourisme de masse. L'Extremadura à l'état brut.",
+      "guide": "Guidage Expert",
+      "guideDesc": "Un guide passionné qui connaît chaque spot, chaque saison, chaque comportement.",
+      "custom": "Séjour à la Carte",
+      "customDesc": "Votre séjour selon vos envies — espèces, techniques, durée, hébergement.",
+      "passion": "Passion & Bonne Humeur",
+      "passionDesc": "Pas de prise de tête. Juste la pêche, le lac et des souvenirs qui durent."
+    },
+    "species": {
+      "title": "LES ESPÈCES",
+      "subtitle": "Brochet, Black Bass, Sandre, Barbeau Comizo — les carnassiers d'Extremadura n'attendent que vous.",
+      "cta": "Toutes les espèces"
+    },
+    "accommodation": {
+      "title": "DORMEZ AU BORD DU LAC",
+      "subtitle": "Nos villas au bord du lac vous permettent de prolonger l'expérience — lever à l'aube, pêche au coucher du soleil, dîner sous les étoiles.",
+      "cta": "Voir l'hébergement"
+    },
+    "whatsapp": {
+      "title": "UNE QUESTION ? UN PROJET ?",
+      "subtitle": "Répondons-y directement sur WhatsApp.",
+      "cta": "Nous contacter sur WhatsApp"
+    }
+  },
+  "stays": {
+    "title": "NOS SÉJOURS",
+    "subtitle": "Des formules pensées pour tous les pêcheurs — du week-end express au séjour sur mesure.",
+    "noPriceLine": "Contactez-nous pour connaître les tarifs",
+    "contactCta": "Nous contacter pour le tarif",
+    "includes": "Inclus dans le séjour"
+  },
+  "accommodation": {
+    "title": "HÉBERGEMENT",
+    "subtitle": "Dormez au bord du lac dans nos villas de caractère.",
+    "capacity": "Capacité",
+    "contactCta": "Nous contacter pour disponibilités et tarifs",
+    "combine": {
+      "title": "COMBINEZ PÊCHE + HÉBERGEMENT",
+      "subtitle": "Nos séjours tout-inclus intègrent hébergement, guidage, licences et repas. La formule idéale pour profiter pleinement.",
+      "cta": "Voir les séjours"
+    }
+  },
+  "species": {
+    "title": "LES ESPÈCES",
+    "subtitle": "Quatre carnassiers d'exception sur les eaux d'Extremadura.",
+    "behavior": "Comportement",
+    "techniques": "Techniques",
+    "season": "Meilleure saison",
+    "contactCta": "Réserver un séjour"
+  },
+  "gallery": {
+    "title": "GALERIE",
+    "subtitle": "Aperçu de la vie sur le lac.",
+    "notice": "Photos provisoires — vraies photos à venir"
+  },
+  "blog": {
+    "title": "BLOG",
+    "subtitle": "Conseils, spots et retours du terrain.",
+    "readMore": "Lire la suite",
+    "backToBlog": "← Retour au blog",
+    "contactCta": "Réserver votre séjour"
+  },
+  "contact": {
+    "title": "CONTACTEZ-NOUS",
+    "subtitle": "Plusieurs façons de nous joindre — choisissez celle qui vous convient.",
+    "form": {
+      "title": "FORMULAIRE DE CONTACT",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Objet",
+      "subjectOptions": {
+        "peche": "Séjour pêche",
+        "villa": "Location villa",
+        "info": "Renseignement"
+      },
+      "stayType": "Type de séjour",
+      "persons": "Nombre de personnes",
+      "period": "Période souhaitée",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
+      "placeholder": {
+        "subject": "Sélectionnez un objet",
+        "stayType": "Ex : Week-end Carnassiers, Séjour Mouche...",
+        "persons": "Ex : 2",
+        "period": "Ex : Octobre 2025",
+        "message": "Décrivez votre projet, vos questions..."
+      }
+    },
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "merci": {
+    "title": "MESSAGE ENVOYÉ !",
+    "subtitle": "Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.",
+    "backHome": "Retour à l'accueil",
+    "whatsapp": "Nous contacter sur WhatsApp"
+  },
+  "footer": {
+    "slogan": "Nature. Passion. Bonne humeur.",
+    "location": "Valdecaballeros, Extremadura, Espagne",
+    "rights": "Tous droits réservés."
+  }
+}

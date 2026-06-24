@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "stays": "Estancias",
+    "accommodation": "Alojamiento",
+    "species": "Especies",
+    "gallery": "Galería",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "book": "Reservar"
+  },
+  "home": {
+    "heroTitle1": "DINI",
+    "heroTitle2": "FISHING",
+    "heroTagline": "Estancias de pesca guiada a carnívoros",
+    "heroSubtitle": "Valdecaballeros, Extremadura — España",
+    "heroCta1": "Descubrir las estancias",
+    "heroCta2": "Contactarnos",
+    "arguments": {
+      "title": "¿POR QUÉ DINI FISHING?",
+      "nature": "Naturaleza Preservada",
+      "natureDesc": "Aguas todavía salvajes, lejos del turismo masivo. Extremadura en estado puro.",
+      "guide": "Guía Experto",
+      "guideDesc": "Un guía apasionado que conoce cada spot, cada temporada, cada comportamiento.",
+      "custom": "Estancia a Medida",
+      "customDesc": "Tu estancia a tu manera — especies, técnicas, duración, alojamiento.",
+      "passion": "Pasión & Buen Humor",
+      "passionDesc": "Sin complicaciones. Solo pesca, el lago y recuerdos que duran."
+    },
+    "species": {
+      "title": "LAS ESPECIES",
+      "subtitle": "Lucio, Black Bass, Lucioperca, Barbo Comizo — los carnívoros de Extremadura te esperan.",
+      "cta": "Todas las especies"
+    },
+    "accommodation": {
+      "title": "DUERME A ORILLAS DEL LAGO",
+      "subtitle": "Nuestras villas a orillas del lago prolongan la experiencia — despertar al amanecer, pescar al atardecer, cenar bajo las estrellas.",
+      "cta": "Ver alojamiento"
+    },
+    "whatsapp": {
+      "title": "¿UNA PREGUNTA? ¿UN PROYECTO?",
+      "subtitle": "Hablemos directamente por WhatsApp.",
+      "cta": "Contactarnos por WhatsApp"
+    }
+  },
+  "stays": {
+    "title": "NUESTRAS ESTANCIAS",
+    "subtitle": "Paquetes diseñados para todos los pescadores — desde un fin de semana rápido hasta una estancia a medida.",
+    "noPriceLine": "Contáctenos para tarifas",
+    "contactCta": "Contáctenos para tarifas",
+    "includes": "Incluido en la estancia"
+  },
+  "accommodation": {
+    "title": "ALOJAMIENTO",
+    "subtitle": "Duerme a orillas del lago en nuestras villas con carácter.",
+    "capacity": "Capacidad",
+    "contactCta": "Contáctenos para disponibilidad y tarifas",
+    "combine": {
+      "title": "COMBINA PESCA + ALOJAMIENTO",
+      "subtitle": "Nuestras estancias todo incluido integran alojamiento, guía, licencias y comidas. La fórmula ideal para disfrutar al máximo.",
+      "cta": "Ver estancias"
+    }
+  },
+  "species": {
+    "title": "LAS ESPECIES",
+    "subtitle": "Cuatro depredadores excepcionales en las aguas de Extremadura.",
+    "behavior": "Comportamiento",
+    "techniques": "Técnicas",
+    "season": "Mejor temporada",
+    "contactCta": "Reservar una estancia"
+  },
+  "gallery": {
+    "title": "GALERÍA",
+    "subtitle": "Un vistazo a la vida en el lago.",
+    "notice": "Fotos provisionales — fotos reales próximamente"
+  },
+  "blog": {
+    "title": "BLOG",
+    "subtitle": "Consejos, spots e informes de campo.",
+    "readMore": "Leer más",
+    "backToBlog": "← Volver al blog",
+    "contactCta": "Reserva tu estancia"
+  },
+  "contact": {
+    "title": "CONTÁCTENOS",
+    "subtitle": "Varias formas de contactarnos — elige la que más te convenga.",
+    "form": {
+      "title": "FORMULARIO DE CONTACTO",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Email",
+      "phone": "Teléfono",
+      "subject": "Asunto",
+      "subjectOptions": {
+        "peche": "Estancia de pesca",
+        "villa": "Alquiler de villa",
+        "info": "Información"
+      },
+      "stayType": "Tipo de estancia",
+      "persons": "Número de personas",
+      "period": "Período deseado",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "errorMsg": "Se produjo un error. Por favor, inténtelo de nuevo o contáctenos directamente.",
+      "placeholder": {
+        "subject": "Selecciona un asunto",
+        "stayType": "Ej.: Fin de semana Carnívoros, Pesca con Mosca...",
+        "persons": "Ej.: 2",
+        "period": "Ej.: Octubre 2025",
+        "message": "Describe tu proyecto, tus preguntas..."
+      }
+    },
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "merci": {
+    "title": "¡MENSAJE ENVIADO!",
+    "subtitle": "Hemos recibido tu mensaje y te responderemos lo antes posible.",
+    "backHome": "Volver al inicio",
+    "whatsapp": "Contáctenos por WhatsApp"
+  },
+  "footer": {
+    "slogan": "Naturaleza. Pasión. Buen humor.",
+    "location": "Valdecaballeros, Extremadura, España",
+    "rights": "Todos los derechos reservados."
+  }
+}

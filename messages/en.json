@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Home",
+    "stays": "Stays",
+    "accommodation": "Accommodation",
+    "species": "Species",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "home": {
+    "heroTitle1": "DINI",
+    "heroTitle2": "FISHING",
+    "heroTagline": "Guided predator fishing stays",
+    "heroSubtitle": "Valdecaballeros, Extremadura — Spain",
+    "heroCta1": "Discover our stays",
+    "heroCta2": "Contact us",
+    "arguments": {
+      "title": "WHY DINI FISHING?",
+      "nature": "Preserved Nature",
+      "natureDesc": "Wild, untouched waters far from mass tourism. Extremadura in its raw state.",
+      "guide": "Expert Guiding",
+      "guideDesc": "A passionate guide who knows every spot, every season, every fish behavior.",
+      "custom": "Tailor-Made Stays",
+      "customDesc": "Your stay your way — species, techniques, duration, accommodation.",
+      "passion": "Passion & Good Vibes",
+      "passionDesc": "No stress. Just fishing, the lake, and memories that last a lifetime."
+    },
+    "species": {
+      "title": "THE SPECIES",
+      "subtitle": "Pike, Bass, Zander, Comizo Barbel — Extremadura's predators are waiting for you.",
+      "cta": "All species"
+    },
+    "accommodation": {
+      "title": "SLEEP LAKESIDE",
+      "subtitle": "Our lakeside villas extend the experience — wake at dawn, fish at sunset, dine under the stars.",
+      "cta": "View accommodation"
+    },
+    "whatsapp": {
+      "title": "A QUESTION? A PROJECT?",
+      "subtitle": "Let's talk directly on WhatsApp.",
+      "cta": "Contact us on WhatsApp"
+    }
+  },
+  "stays": {
+    "title": "OUR STAYS",
+    "subtitle": "Packages designed for every angler — from a quick weekend to a custom stay.",
+    "noPriceLine": "Contact us for pricing",
+    "contactCta": "Contact us for pricing",
+    "includes": "Included in the stay"
+  },
+  "accommodation": {
+    "title": "ACCOMMODATION",
+    "subtitle": "Sleep lakeside in our characterful villas.",
+    "capacity": "Capacity",
+    "contactCta": "Contact us for availability and pricing",
+    "combine": {
+      "title": "COMBINE FISHING + ACCOMMODATION",
+      "subtitle": "Our all-inclusive stays integrate accommodation, guiding, licenses and meals. The ideal formula to fully enjoy.",
+      "cta": "View stays"
+    }
+  },
+  "species": {
+    "title": "THE SPECIES",
+    "subtitle": "Four exceptional predators in Extremadura's waters.",
+    "behavior": "Behavior",
+    "techniques": "Techniques",
+    "season": "Best season",
+    "contactCta": "Book a stay"
+  },
+  "gallery": {
+    "title": "GALLERY",
+    "subtitle": "A glimpse of life on the lake.",
+    "notice": "Provisional photos — real photos coming soon"
+  },
+  "blog": {
+    "title": "BLOG",
+    "subtitle": "Tips, spots and field reports.",
+    "readMore": "Read more",
+    "backToBlog": "← Back to blog",
+    "contactCta": "Book your stay"
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "Several ways to reach us — choose the one that suits you.",
+    "form": {
+      "title": "CONTACT FORM",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectOptions": {
+        "peche": "Fishing stay",
+        "villa": "Villa rental",
+        "info": "Information"
+      },
+      "stayType": "Stay type",
+      "persons": "Number of people",
+      "period": "Desired period",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "errorMsg": "An error occurred. Please try again or contact us directly.",
+      "placeholder": {
+        "subject": "Select a subject",
+        "stayType": "E.g.: Predator Weekend, Fly Fishing...",
+        "persons": "E.g.: 2",
+        "period": "E.g.: October 2025",
+        "message": "Describe your project, your questions..."
+      }
+    },
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "merci": {
+    "title": "MESSAGE SENT!",
+    "subtitle": "We have received your message and will reply as soon as possible.",
+    "backHome": "Back to home",
+    "whatsapp": "Contact us on WhatsApp"
+  },
+  "footer": {
+    "slogan": "Nature. Passion. Good vibes.",
+    "location": "Valdecaballeros, Extremadura, Spain",
+    "rights": "All rights reserved."
+  }
+}
