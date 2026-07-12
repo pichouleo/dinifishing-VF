@@ -8,7 +8,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
 
   const methods = [
     { icon: '📱', label: 'WhatsApp', value: '+33 6 68 17 87 43', href: 'https://wa.me/33668178743', color: 'bg-green-800' },
-    { icon: '✉️', label: 'Email', value: 'dini.extremadura@hotmail.com', href: 'mailto:dini.extremadura@hotmail.com', color: 'bg-blue-900',valueClass: 'text-[10px]' },
+    { icon: '✉️', label: 'Email', value: 'dini.extremadura', value2: '@hotmail.com', href: 'mailto:dini.extremadura@hotmail.com', color: 'bg-blue-900' },
     { icon: '📘', label: 'Facebook', value: 'DINI.FISHING', href: 'https://www.facebook.com/DINI.FISHING', color: 'bg-blue-800' },
     { icon: '📸', label: 'Instagram', value: '@DINI.FISHING', href: 'https://www.instagram.com/DINI.FISHING', color: 'bg-pink-900' },
   ]
@@ -24,13 +24,13 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           {methods.map((m) => (
             <a key={m.label} href={m.href} target="_blank" rel="noopener noreferrer"
-              className={`${m.color} border border-noir-leger hover:border-rouge-sang p-4 text-center transition-colors group`}>
-              <div className="text-3xl mb-2">{m.icon}</div>
-              <div className="font-bebas text-blanc-casse tracking-widest text-sm">{m.label}</div>
-              <div className={`text-blanc-attenue mt-1 truncate group-hover:text-rouge-sang transition-colors text-xs ${m.valueClass}`}>
-  {m.value}
+  className={`${m.color} border border-noir-leger hover:border-rouge-sang p-4 text-center transition-colors group min-w-0 overflow-hidden`}>
+  <div className="text-3xl mb-2">{m.icon}</div>
+  <div className="font-bebas text-blanc-casse tracking-widest text-sm">{m.label}</div>
+  <div className="text-blanc-attenue text-xs mt-1 group-hover:text-rouge-sang transition-colors leading-tight">
+  {m.value}{m.value2 && <><br />{m.value2}</>}
 </div>
-            </a>
+</a>
           ))}
         </div>
       </section>
