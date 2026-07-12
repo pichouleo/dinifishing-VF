@@ -23,7 +23,14 @@ export default function HebergementPage({ params: { locale } }: { params: { loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {villas.map((villa) => (
-              <VillaCard key={villa.id} name={villa.name} image={villa.image} capacity={villa.capacity} description={villa.description} equipments={villa.equipments} />
+              <VillaCard 
+  key={villa.id} 
+  name={villa.name} 
+  images={villa.images} 
+  capacity={villa.capacity} 
+  description={villa.description} 
+  equipments={villa.features}
+/>
             ))}
           </div>
         </div>
