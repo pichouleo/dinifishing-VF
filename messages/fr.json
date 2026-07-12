@@ -12,16 +12,16 @@
   "home": {
     "heroTitle1": "DINI",
     "heroTitle2": "FISHING",
-    "heroTagline": "Séjours de pêche guidés aux carnassiers",
+    "heroTagline": "Séjour de pêche aux carnassiers",
     "heroSubtitle": "Valdecaballeros, Extremadura — Espagne",
     "heroCta1": "Découvrir les séjours",
     "heroCta2": "Nous contacter",
     "arguments": {
       "title": "POURQUOI DINI FISHING ?",
       "nature": "Nature Préservée",
-      "natureDesc": "Des eaux encore sauvages, loin du tourisme de masse. L'Extremadura à l'état brut.",
+      "natureDesc": "Une destination réputée avec des paysages sauvages et différents d’un barrage à l’autre.",
       "guide": "Guidage Expert",
-      "guideDesc": "Un guide passionné qui connaît chaque spot, chaque saison, chaque comportement.",
+      "guideDesc": "Un guide passionné et installé depuis plusieurs années. Adorant pêcher toutes les espèces selon les saisons.",
       "custom": "Séjour à la Carte",
       "customDesc": "Votre séjour selon vos envies — espèces, techniques, durée, hébergement.",
       "passion": "Passion & Bonne Humeur",
@@ -29,14 +29,14 @@
     },
     "species": {
       "title": "LES ESPÈCES",
-      "subtitle": "Brochet, Black Bass, Sandre, Barbeau Comizo — les carnassiers d'Extremadura n'attendent que vous.",
+      "subtitle": "Brochet, Black Bass, Sandre, Barbeau Comizo, ces poissons n'attendent que vous.",
       "cta": "Toutes les espèces"
     },
     "accommodation": {
-      "title": "DORMEZ AU BORD DU LAC",
-      "subtitle": "Nos villas au bord du lac vous permettent de prolonger l'expérience — lever à l'aube, pêche au coucher du soleil, dîner sous les étoiles.",
-      "cta": "Voir l'hébergement"
-    },
+  "title": "DORMEZ AU CŒUR D'UN VILLAGE TYPIQUE",
+  "subtitle": "Nos hébergements situés très proche du centre du village vous permettent une grande autonomie — lever à l'aube, pêche au coucher du soleil, dîner sous les étoiles.",
+  "cta": "Voir l'hébergement"
+},
     "whatsapp": {
       "title": "UNE QUESTION ? UN PROJET ?",
       "subtitle": "Répondons-y directement sur WhatsApp.",

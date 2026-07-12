@@ -22,7 +22,7 @@ export default function HeroSection({
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-noir-profond/70 via-noir-profond/50 to-noir-profond" />
+      <div className="absolute inset-0 bg-gradient-to-b from-noir-profond/40 via-noir-profond/30 to-noir-profond" />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="font-bebas tracking-widest leading-none">
           <span className="block text-7xl md:text-9xl text-blanc-casse">{title1}</span>
