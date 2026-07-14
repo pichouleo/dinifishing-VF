@@ -2,7 +2,6 @@
 import { useState, FormEvent } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
-import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
   const t = useTranslations('contact.form')
@@ -21,22 +20,15 @@ export default function ContactForm() {
   }
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+  e.preventDefault()
+  setLoading(true)
+  setError('')
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-
-    if (!serviceId || !templateId || !publicKey) {
-      setError(t('errorMsg'))
-      setLoading(false)
-      return
-    }
-
-    try {
-      await emailjs.send(serviceId, templateId, {
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         from_name: `${form.firstName} ${form.lastName}`,
         from_email: form.email,
         phone: form.phone,
@@ -45,14 +37,16 @@ export default function ContactForm() {
         persons: form.persons,
         period: form.period,
         message: form.message,
-        to_email: 'dini.extremadura@hotmail.com',
-      }, publicKey)
-      router.push(`/${locale}/merci`)
-    } catch {
-      setError(t('errorMsg'))
-      setLoading(false)
-    }
+      }),
+    })
+
+    if (!response.ok) throw new Error('Erreur envoi')
+    router.push(`/${locale}/merci`)
+  } catch {
+    setError(t('errorMsg'))
+    setLoading(false)
   }
+}
 
   const inputClass = "w-full bg-noir-leger border border-noir-leger focus:border-rouge-sang text-blanc-casse placeholder-blanc-attenue/50 px-4 py-3 outline-none transition-colors text-sm"
 
