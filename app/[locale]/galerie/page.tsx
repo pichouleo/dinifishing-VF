@@ -2,15 +2,22 @@ import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1447684808650-354ae64db5b8?w=800', caption: 'Lever de soleil sur le lac' },
-  { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800', caption: 'Brochet trophée' },
-  { src: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800', caption: 'Black Bass en action' },
-  { src: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=800', caption: 'Matinée de pêche' },
-  { src: 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=800', caption: 'Pêche à la mouche' },
-  { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800', caption: "Paysage d'Extremadura" },
-  { src: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800', caption: 'Villa au bord du lac' },
-  { src: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800', caption: 'Barbeau Comizo' },
-  { src: 'https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=800', caption: 'Session sandre' },
+  { src: '/galerie/photo-01.jpg', caption: '' },
+  { src: '/galerie/photo-02.jpg', caption: '' },
+  { src: '/galerie/photo-03.jpg', caption: '' },
+  { src: '/galerie/photo-04.jpg', caption: '' },
+  { src: '/galerie/photo-05.jpg', caption: '' },
+  { src: '/galerie/photo-06.jpg', caption: '' },
+  { src: '/galerie/photo-07.jpg', caption: '' },
+  { src: '/galerie/photo-08.jpg', caption: '' },
+  { src: '/galerie/photo-09.jpg', caption: '' },
+  { src: '/galerie/photo-10.jpg', caption: '' },
+  { src: '/galerie/photo-11.jpg', caption: '' },
+  { src: '/galerie/photo-12.jpg', caption: '' },
+  { src: '/galerie/photo-13.jpg', caption: '' },
+  { src: '/galerie/photo-14.jpg', caption: '' },
+  { src: '/galerie/photo-15.jpg', caption: '' },
+  { src: '/galerie/photo-16.jpg', caption: '' },
 ]
 
 export default function GaleriePage({ params: { locale } }: { params: { locale: string } }) {
