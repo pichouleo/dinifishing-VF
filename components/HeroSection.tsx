@@ -19,8 +19,8 @@ export default function HeroSection({
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${imageUrl})` }}
+        className="absolute inset-0 bg-cover md:bg-center"
+        style={{ backgroundImage: `url(${imageUrl})`, backgroundPosition: '20% center' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-noir-profond/40 via-noir-profond/30 to-noir-profond" />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
