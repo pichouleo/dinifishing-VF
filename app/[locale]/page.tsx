@@ -136,7 +136,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </Link>
             </div>
             <div className="relative h-80 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800" alt="Villa bord du lac" className="w-full h-full object-cover" />
+              <img src="village-extremadura.jpg" alt="Villa bord du lac" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-noir-profond/50 to-transparent" />
             </div>
           </div>
