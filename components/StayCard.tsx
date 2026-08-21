@@ -7,14 +7,20 @@ interface StayCardProps {
   image: string
   description: string
   includes: string[]
+  featured?: boolean
 }
 
-export default function StayCard({ title, duration, image, description, includes }: StayCardProps) {
+export default function StayCard({ title, duration, image, description, includes, featured = false }: StayCardProps) {
   const t = useTranslations('stays')
   const locale = useLocale()
   return (
-    <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors overflow-hidden">
-      <div className="aspect-video overflow-hidden">
+    <div className={`relative bg-noir-carte overflow-hidden transition-colors ${featured ? 'border-2 border-rouge-sang scale-105' : 'border border-noir-leger hover:border-rouge-sang'}`}>
+      {featured && (
+        <div className="absolute top-0 left-0 right-0 z-10 bg-rouge-sang text-white font-bebas tracking-widest text-xs text-center py-1">
+          ⭐ LE PLUS POPULAIRE
+        </div>
+      )}
+      <div className={`aspect-video overflow-hidden ${featured ? 'mt-6' : ''}`}>
         <img src={image} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
       </div>
       <div className="p-6">

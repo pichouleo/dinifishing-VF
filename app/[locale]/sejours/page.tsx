@@ -25,15 +25,16 @@ export default function SejoursPage({ params: { locale } }: { params: { locale: 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {stays.map((stay) => (
-              <StayCard
-                key={stay.id}
-                title={currentLocale === 'en' ? stay.titleEn : currentLocale === 'es' ? stay.titleEs : stay.title}
-                duration={currentLocale === 'en' ? stay.durationEn : currentLocale === 'es' ? stay.durationEs : stay.duration}
-                image={stay.image}
-                description={currentLocale === 'en' ? stay.descriptionEn : currentLocale === 'es' ? stay.descriptionEs : stay.description}
-                includes={currentLocale === 'en' ? stay.includesEn : currentLocale === 'es' ? stay.includesEs : stay.includes}
-              />
-            ))}
+  <StayCard
+    key={stay.id}
+    title={currentLocale === 'en' ? stay.titleEn : currentLocale === 'es' ? stay.titleEs : stay.title}
+    duration={currentLocale === 'en' ? stay.durationEn : currentLocale === 'es' ? stay.durationEs : stay.duration}
+    image={stay.image}
+    description={currentLocale === 'en' ? stay.descriptionEn : currentLocale === 'es' ? stay.descriptionEs : stay.description}
+    includes={currentLocale === 'en' ? stay.includesEn : currentLocale === 'es' ? stay.includesEs : stay.includes}
+    featured={stay.id === 'sur-mesure'}
+  />
+))}
           </div>
         </div>
       </section>
