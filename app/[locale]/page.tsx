@@ -101,7 +101,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors p-8 text-center">
         <div className="text-4xl mb-4">🚤</div>
         <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">VOTRE BATEAU</h3>
-        <p className="text-blanc-attenue text-sm">Mettez à l'eau votre propre bateau sur nos spots. Accès direct aux mises à l'eau du Garcia Sola.</p>
+        <p className="text-blanc-attenue text-sm">Mettez à l'eau votre propre bateau sur nos spots. Accès direct aux mises à l'eau des barrages d'Extremadura.</p>
       </div>
       <div className="bg-noir-carte border border-rouge-sang p-8 text-center relative">
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-rouge-sang text-white font-bebas text-xs tracking-widest px-4 py-1">EXCLUSIF</div>
