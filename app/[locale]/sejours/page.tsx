@@ -79,6 +79,13 @@ export default function SejoursPage({ params: { locale } }: { params: { locale: 
             </div>
           </div>
           <div className="flex items-center gap-4 border-l-2 border-rouge-sang pl-4">
+  <span className="text-2xl">🏖️</span>
+  <div>
+    <h3 className="font-bebas text-blanc-casse tracking-widest">PÊCHE DU BORD</h3>
+    <p className="text-blanc-attenue text-sm">Pas de bateau ? Pas de problème. De nombreux spots sont accessibles depuis la rive.</p>
+  </div>
+</div>
+          <div className="flex items-center gap-4 border-l-2 border-rouge-sang pl-4">
             <span className="text-2xl">🎣</span>
             <div>
               <h3 className="font-bebas text-blanc-casse tracking-widest">VOTRE MATÉRIEL</h3>
