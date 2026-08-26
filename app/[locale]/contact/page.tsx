@@ -10,7 +10,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     { icon: '📱', label: 'WhatsApp', value: '+33 6 68 17 87 43', href: 'https://wa.me/33668178743', color: 'bg-green-800' },
     { icon: '✉️', label: 'Email', value: 'dini.extremadura', value2: '@hotmail.com', href: 'mailto:dini.extremadura@hotmail.com', color: 'bg-blue-900' },
     { icon: '📘', label: 'Facebook', value: 'DINI.FISHING', href: 'https://www.facebook.com/DINI.FISHING', color: 'bg-blue-800' },
-    { icon: '📸', label: 'Instagram', value: '@DINI.FISHING', href: 'https://www.instagram.com/DINI.FISHING', color: 'bg-pink-900' },
+    { icon: '📸', label: 'Instagram', value: '@DINI.FISHING', href: 'https://www.instagram.com/dinifishing', color: 'bg-pink-900' },
   ]
 
   return (

@@ -154,4 +154,54 @@ La pêche aux carnassiers en Extremadura est une aventure à part entière. Elle
 Posez-nous toutes vos questions en amont du séjour — nous sommes là pour que vous arriviez prêts et repartiez comblés.
     `,
   },
+
+  {
+  id: '4',
+  slug: 'cedric-gandini-guide-peche-extremadura-interview',
+  title: "Cédric Gandini : « S'épanouir dans un métier passion et transmettre »",
+  excerpt: "Rencontre avec Cédric Gandini, alias Dini Fishing, moniteur guide de pêche en Extremadura. Il nous parle de sa reconversion, de sa passion et de ce qui rend l'Extremadura si unique.",
+  date: '2023-03-15',
+  image: '/blog/article-cedric-gandini.jpeg',
+  content: `
+# Cédric Gandini : « S'épanouir dans un métier passion et transmettre »
+
+*Article publié originalement sur [peche.com](https://www.peche.com/article/42506/cedric-gandini-s-epanouir-dans-un-metier-passion-et-transmettre)*
+
+Cédric Gandini est moniteur guide de pêche en Espagne dans la région de l'Extremadura. Il propose à ses clients de pêcher les grands lacs espagnols du bord, en float-tube ou en bateau.
+
+## Bonjour Cédric, peux-tu te présenter ?
+
+Je m'appelle Cédric Gandini (alias Dini Fishing) et j'ai grandi dans le département du Tarn dans le sud-ouest de la France. Après quelques étapes professionnelles en Creuse et en Auvergne, j'ai suivi la formation du BPJEPS moniteur guide de pêche en 2016 dans l'Aveyron. Ma passion pour la nature et plus particulièrement pour l'activité pêche de loisir m'a poussé très récemment sur une mise en place de prestations de guidage en Espagne dans la région d'Extremadura.
+
+## Pourquoi es-tu devenu guide de pêche ?
+
+Pour m'épanouir dans un métier passion. En 2016, voulant m'investir dans le monde de la pêche de mon département, j'ai voulu me former dans les animations pêche avec de nombreux publics différents. Une année riche en rencontres, mais aussi en moments de partage m'ont conforté dans mon idée de reconversion. Une envie simple de transmettre ma joie au bord de l'eau.
+
+## Quels types de produits de guidage proposes-tu ?
+
+Je propose depuis mon installation en Espagne, l'organisation de séjour pêche à la carte. Lors de ces séjours, je propose mes services en tant que guide pour permettre à tous et toutes de découvrir au mieux les différents barrages d'Extremadura ainsi que sa nature sauvage, la pêche du moment, des bons petits plats locaux et bien sûr l'hospitalité de ce pays très accueillant.
+
+Le choix des prestations est assez diversifié — le logement très proche de magnifiques barrages me permet de faire pratiquer la pêche du bord, en float-tube et en bateau. Il ne vous reste plus qu'à composer le menu de vos vacances.
+
+## Qu'est-ce qu'être guide de pêche pour toi ?
+
+Être un guide, comme ce mot l'indique, signifie pour moi d'être une personne à l'écoute et qui met tout en œuvre pour faire ressentir et pour transmettre la passion qui l'anime.
+
+## Tu pêches lorsque tu es en guidage ?
+
+Non, jamais lors de mes guidages, sauf si c'est le choix de ou des personnes guidées. Une journée de guidage reste une journée qui s'organise et doit enrichir la personne guidée. C'est un travail passion, mais aussi un travail très prenant.
+
+## Que fais-tu lorsque tu ne guides pas ?
+
+Mes temps libres se passent toujours non loin de l'eau ou en pleine nature. J'ai la chance de vivre dans un petit paradis où je peux vivre ma passion sans trop de limites. L'Extremadura est tellement riche que je prépare mes nouveaux guidages en pratiquant tous types de pêche, mais aussi en explorant de sublimes paysages en me promenant dans la DEHESA — un biotope artificiel modelé par l'homme qui s'étend sur une grande partie de l'Espagne et du Portugal.
+
+## Quel est ton rêve en tant que pêcheur ?
+
+Actuellement, je suis en train de le vivre et j'espère que je ne me réveillerai jamais.
+
+---
+
+*Retrouvez l'article original sur [peche.com](https://www.peche.com/article/42506/cedric-gandini-s-epanouir-dans-un-metier-passion-et-transmettre)*
+  `,
+},
 ]

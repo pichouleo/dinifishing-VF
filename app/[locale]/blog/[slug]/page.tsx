@@ -22,6 +22,28 @@ export default function BlogPostPage({ params }: Props) {
   const article = articles.find((a) => a.slug === params.slug)
   if (!article) notFound()
 
+  const renderInline = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+    const parts: (string | JSX.Element)[] = []
+    let lastIndex = 0
+    let match
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index))
+      }
+      parts.push(
+        <a key={match.index} href={match[2]} target="_blank" rel="noopener noreferrer"
+          className="text-rouge-sang hover:underline">
+          {match[1]}
+        </a>
+      )
+      lastIndex = match.index + match[0].length
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+    return parts.length > 0 ? parts : text
+  }
+
   const renderContent = (content: string) => {
     return content.trim().split('\n\n').map((para, i) => {
       if (para.startsWith('# ')) return <h1 key={i} className="font-bebas text-4xl text-blanc-casse tracking-widest mt-8 mb-4">{para.slice(2)}</h1>
@@ -29,9 +51,27 @@ export default function BlogPostPage({ params }: Props) {
       if (para.startsWith('### ')) return <h3 key={i} className="font-bebas text-2xl text-or-mat tracking-widest mt-6 mb-3">{para.slice(4)}</h3>
       if (para.startsWith('- ')) {
         const items = para.split('\n').filter(l => l.startsWith('- ')).map(l => l.slice(2))
-        return <ul key={i} className="space-y-1 my-4">{items.map((item, j) => <li key={j} className="flex items-start gap-2 text-blanc-attenue"><span className="text-rouge-sang mt-1">•</span>{item}</li>)}</ul>
+        return (
+          <ul key={i} className="space-y-1 my-4">
+            {items.map((item, j) => (
+              <li key={j} className="flex items-start gap-2 text-blanc-attenue">
+                <span className="text-rouge-sang mt-1">•</span>
+                {renderInline(item)}
+              </li>
+            ))}
+          </ul>
+        )
       }
-      return <p key={i} className="text-blanc-attenue leading-relaxed my-4">{para}</p>
+      if (para.startsWith('**') && para.endsWith('**')) {
+        return <p key={i} className="text-blanc-casse font-semibold leading-relaxed my-4">{renderInline(para.slice(2, -2))}</p>
+      }
+      if (para.startsWith('*') && para.endsWith('*')) {
+        return <p key={i} className="text-blanc-attenue/70 italic leading-relaxed my-4 text-sm">{renderInline(para.slice(1, -1))}</p>
+      }
+      if (para.startsWith('---')) {
+        return <hr key={i} className="border-noir-leger my-8" />
+      }
+      return <p key={i} className="text-blanc-attenue leading-relaxed my-4">{renderInline(para)}</p>
     })
   }
 
