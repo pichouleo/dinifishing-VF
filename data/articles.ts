@@ -54,8 +54,8 @@ Contactez-nous pour réserver votre séjour et découvrir ces spots légendaires
     slug: 'peche-mouche-espagne-extremadura',
     title: "Pêche à la mouche en Espagne : pourquoi choisir l'Extremadura ?",
     excerpt: "L'Extremadura s'impose comme la destination de référence pour la pêche à la mouche en Espagne. Voici pourquoi.",
-    date: '2024-02-28',
-    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=800',
+    date: '2026-07-28',
+    image: '/blog/article-peche-mouche.jpg',
     content: `
 # Pêche à la mouche en Espagne : pourquoi choisir l'Extremadura ?
 
@@ -100,8 +100,8 @@ Contactez-nous pour préparer votre aventure à la mouche en Extremadura.
     slug: 'preparer-sejour-peche-carnassiers',
     title: 'Préparer son séjour de pêche aux carnassiers : conseils du guide',
     excerpt: 'Notre guide partage ses conseils essentiels pour préparer au mieux votre séjour de pêche aux carnassiers en Extremadura.',
-    date: '2024-01-20',
-    image: '/blog/article-blackbass.jpg',
+    date: '2026-08-26',
+    image: '/blog/article-carnassiers.jpg',
     content: `
 # Préparer son séjour de pêche aux carnassiers : conseils du guide
 
