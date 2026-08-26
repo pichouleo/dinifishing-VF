@@ -10,7 +10,7 @@ export default function EspecesPage({ params: { locale } }: { params: { locale: 
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <section className="relative py-24 flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        style={{ backgroundImage: 'url(/especes/background-especes-poissons.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-noir-profond/80" />
         <div className="relative z-10 text-center px-4">
           <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
