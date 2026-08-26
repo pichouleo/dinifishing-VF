@@ -14,8 +14,8 @@ export const articles: Article[] = [
     slug: 'meilleurs-spots-black-bass-extremadura',
     title: 'Les meilleurs spots de Black Bass en Extremadura',
     excerpt: 'Découvrez les spots incontournables pour pêcher le Black Bass en Extremadura, des conseils de terrain exclusifs de notre guide.',
-    date: '2024-03-15',
-    image: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800',
+    date: '2026-06-15',
+    image: '/blog/article-blackbass.jpg',
     content: `
 # Les meilleurs spots de Black Bass en Extremadura
 
@@ -101,7 +101,7 @@ Contactez-nous pour préparer votre aventure à la mouche en Extremadura.
     title: 'Préparer son séjour de pêche aux carnassiers : conseils du guide',
     excerpt: 'Notre guide partage ses conseils essentiels pour préparer au mieux votre séjour de pêche aux carnassiers en Extremadura.',
     date: '2024-01-20',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+    image: '/blog/article-blackbass.jpg',
     content: `
 # Préparer son séjour de pêche aux carnassiers : conseils du guide
 
