@@ -31,6 +31,7 @@ export default function Footer() {
                 { href: `/${locale}/galerie`, label: tn('gallery') },
                 { href: `/${locale}/blog`, label: tn('blog') },
                 { href: `/${locale}/contact`, label: tn('contact') },
+                { href: `/${locale}/mentions-legales`, label: 'Mentions légales' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-blanc-attenue hover:text-rouge-sang text-sm transition-colors">
@@ -61,7 +62,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/DINI.FISHING" target="_blank" rel="noopener noreferrer" className="hover:text-rouge-sang transition-colors flex items-center gap-2">
+                <a href="https://www.instagram.com/DINIFISHING" target="_blank" rel="noopener noreferrer" className="hover:text-rouge-sang transition-colors flex items-center gap-2">
                   <span>📸</span> DINI.FISHING
                 </a>
               </li>
@@ -71,6 +72,9 @@ export default function Footer() {
 
         <div className="border-t border-noir-leger mt-8 pt-8 text-center text-xs text-blanc-attenue">
           <p>© {new Date().getFullYear()} Dini Fishing. {t('rights')}</p>
+          <Link href={`/${locale}/mentions-legales`} className="text-blanc-attenue hover:text-rouge-sang transition-colors mt-2 inline-block">
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>
