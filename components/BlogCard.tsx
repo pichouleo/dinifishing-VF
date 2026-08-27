@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 
 interface BlogCardProps {
@@ -14,8 +15,8 @@ export default function BlogCard({ title, excerpt, date, image, slug }: BlogCard
   const locale = useLocale()
   return (
     <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors overflow-hidden">
-      <div className="aspect-video overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      <div className="relative aspect-video overflow-hidden">
+        <Image src={image} alt={title} fill className="object-cover hover:scale-105 transition-transform duration-500" />
       </div>
       <div className="p-6">
         <p className="text-or-mat text-xs uppercase tracking-widest mb-2">{new Date(date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>

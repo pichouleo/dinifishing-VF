@@ -4,6 +4,7 @@ import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import SpeciesCard from '@/components/SpeciesCard'
 import { species } from '@/data/species'
+import Image from 'next/image'
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
@@ -136,7 +137,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </Link>
             </div>
             <div className="relative h-80 overflow-hidden">
-              <img src="village-extremadura.jpg" alt="Villa bord du lac" className="w-full h-full object-cover" />
+              <Image src="/village-extremadura.jpg" alt="Village de Valdecaballeros Extremadura" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-noir-profond/50 to-transparent" />
             </div>
           </div>

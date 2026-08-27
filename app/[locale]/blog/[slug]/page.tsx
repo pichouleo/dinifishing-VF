@@ -3,6 +3,7 @@ import { articles } from '@/data/articles'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 interface Props { params: { slug: string; locale: string } }
 
@@ -78,7 +79,7 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <div className="relative h-72 md:h-96 overflow-hidden">
-        <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+        <Image src={article.image} alt={article.title} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-noir-profond to-transparent" />
       </div>
       <article className="max-w-3xl mx-auto px-4 sm:px-6 pb-20">

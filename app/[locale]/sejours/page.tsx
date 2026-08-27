@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import { stays } from '@/data/stays'
 import StayCard from '@/components/StayCard'
+import Image from 'next/image'
 
 export default function SejoursPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
@@ -44,10 +45,11 @@ export default function SejoursPage({ params: { locale } }: { params: { locale: 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden">
-        <img 
+        <Image 
           src="/bateau.jpg" 
-          alt="Bateau de pêche Dini Fishing" 
-          className="w-full h-full object-cover"
+          alt="Bateau de pêche Dini Fishing Extremadura" 
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir-profond/60 to-transparent" />
         <div className="absolute bottom-4 left-4 bg-rouge-sang text-white font-bebas tracking-widest text-sm px-4 py-2">

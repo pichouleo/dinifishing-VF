@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 
 interface StayCardProps {
@@ -8,9 +9,10 @@ interface StayCardProps {
   description: string
   includes: string[]
   featured?: boolean
+  highlight?: string
 }
 
-export default function StayCard({ title, duration, image, description, includes, featured = false }: StayCardProps) {
+export default function StayCard({ title, duration, image, description, includes, featured = false, highlight }: StayCardProps) {
   const t = useTranslations('stays')
   const locale = useLocale()
   return (
@@ -20,8 +22,8 @@ export default function StayCard({ title, duration, image, description, includes
           ⭐ LE PLUS POPULAIRE
         </div>
       )}
-      <div className={`aspect-video overflow-hidden ${featured ? 'mt-6' : ''}`}>
-        <img src={image} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      <div className={`relative aspect-video overflow-hidden ${featured ? 'mt-6' : ''}`}>
+        <Image src={image} alt={title} fill className="object-cover hover:scale-105 transition-transform duration-500" />
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
@@ -40,6 +42,11 @@ export default function StayCard({ title, duration, image, description, includes
             ))}
           </ul>
         </div>
+        {featured && highlight && (
+          <div className="mb-4 border border-rouge-sang/50 bg-rouge-sang/10 px-4 py-3 text-rouge-sang text-sm font-medium">
+            {highlight}
+          </div>
+        )}
         <Link
           href={`/${locale}/contact`}
           className="block text-center bg-rouge-sang hover:bg-rouge-fonce text-white font-bebas tracking-widest py-3 transition-colors"

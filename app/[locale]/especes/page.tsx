@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import { species } from '@/data/species'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function EspecesPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
@@ -27,8 +28,8 @@ export default function EspecesPage({ params: { locale } }: { params: { locale: 
             const season = currentLocale === 'en' ? sp.seasonEn : currentLocale === 'es' ? sp.seasonEs : sp.season
             return (
               <div key={sp.id} id={sp.slug} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                  <img src={sp.image} alt={name} className="w-full aspect-video object-cover" />
+                <div className={`relative aspect-video overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <Image src={sp.image} alt={name} fill className="object-cover" />
                 </div>
                 <div className={i % 2 === 1 ? 'lg:order-1' : ''}>
                   <h2 className="font-bebas text-4xl md:text-5xl text-rouge-sang tracking-widest mb-4">{name}</h2>
