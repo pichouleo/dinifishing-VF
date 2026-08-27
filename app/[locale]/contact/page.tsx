@@ -1,6 +1,17 @@
 import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import ContactForm from '@/components/ContactForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact — Réserver séjour pêche Extremadura — Dini Fishing',
+  description: 'Contactez Dini Fishing pour réserver votre séjour de pêche en Extremadura. WhatsApp +33 6 68 17 87 43. Guide disponible 7j/7.',
+  openGraph: {
+    title: 'Contact — Dini Fishing Extremadura',
+    description: 'Réservez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp.',
+    images: ['/image-hero.png'],
+  },
+}
 
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)

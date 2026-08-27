@@ -3,6 +3,17 @@ import { setRequestLocale } from 'next-intl/server'
 import { stays } from '@/data/stays'
 import StayCard from '@/components/StayCard'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Séjours de pêche en Extremadura — Black Bass, Brochet, Sandre — Dini Fishing',
+  description: 'Séjours de pêche aux carnassiers en Extremadura, Espagne. Pêche à la mouche, carnassiers au leurre, float tube. Guide expert à Valdecaballeros.',
+  openGraph: {
+    title: 'Séjours de pêche en Extremadura — Dini Fishing',
+    description: 'Séjours guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre. Venez avec votre propre bateau ou float tube.',
+    images: ['/sejours/background-sejours-extremadura.jpg'],
+  },
+}
 
 export default function SejoursPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)

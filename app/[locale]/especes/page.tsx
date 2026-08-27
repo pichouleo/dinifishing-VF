@@ -3,6 +3,17 @@ import { setRequestLocale } from 'next-intl/server'
 import { species } from '@/data/species'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Pêche Black Bass, Brochet, Sandre en Extremadura — Dini Fishing',
+  description: 'Black Bass, Brochet, Sandre et Barbeau Comizo sur les lacs sauvages d\'Extremadura, Espagne. Techniques, comportements et meilleures saisons.',
+  openGraph: {
+    title: 'Espèces de pêche en Extremadura — Dini Fishing',
+    description: 'Pêchez le Black Bass, Brochet, Sandre et Barbeau Comizo en Extremadura, Espagne.',
+    images: ['/especes/blackbass.jpg'],
+  },
+}
 
 export default function EspecesPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)

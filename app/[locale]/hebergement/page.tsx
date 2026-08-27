@@ -3,6 +3,17 @@ import { setRequestLocale } from 'next-intl/server'
 import { villas } from '@/data/villas'
 import VillaCard from '@/components/VillaCard'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Hébergement pêcheurs à Valdecaballeros, Extremadura — Dini Fishing',
+  description: 'Appartement et villa à Valdecaballeros, Extremadura. Hébergements idéaux pour les séjours de pêche aux carnassiers, proches des lacs Garcia Sola et Orellana.',
+  openGraph: {
+    title: 'Hébergement à Valdecaballeros — Dini Fishing',
+    description: 'Logements de caractère pour pêcheurs à Valdecaballeros, Extremadura. Proches des mises à l\'eau Garcia Sola, Orellana et Cijara.',
+    images: ['/images/hebergement/villa-1.jpg'],
+  },
+}
 
 export default function HebergementPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)

@@ -1,5 +1,17 @@
 import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Galerie — Pêche en Extremadura, Espagne — Dini Fishing',
+  description: 'Photos de pêche aux carnassiers en Extremadura — Black Bass, Brochet, Sandre, float tube, bateau. Séjours guidés avec Dini Fishing.',
+  openGraph: {
+    title: 'Galerie — Dini Fishing Extremadura',
+    description: 'Photos de pêche en Extremadura, Espagne. Carnassiers, float tube et lacs sauvages.',
+    images: ['/galerie/photo-01.jpg'],
+  },
+}
+
 
 const photos = [
   { src: '/galerie/photo-01.jpg', caption: 'Pêche carnassiers Extremadura' },
