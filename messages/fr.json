@@ -19,7 +19,7 @@
     "arguments": {
       "title": "POURQUOI DINI FISHING ?",
       "nature": "Nature Préservée",
-      "natureDesc": "Une destination réputée avec des paysages sauvages et différents d’un barrage à l’autre.",
+      "natureDesc": "Une destination réputée avec des paysages sauvages et différents d'un barrage à l'autre.",
       "guide": "Guidage Expert",
       "guideDesc": "Un guide passionné et installé depuis plusieurs années. Adorant pêcher toutes les espèces selon les saisons.",
       "custom": "Séjour à la Carte",
@@ -33,10 +33,10 @@
       "cta": "Toutes les espèces"
     },
     "accommodation": {
-  "title": "DORMEZ AU CŒUR D'UN VILLAGE TYPIQUE",
-  "subtitle": "Nos hébergements situés très proche du centre du village vous permettent une grande autonomie — lever à l'aube, pêche au coucher du soleil, dîner sous les étoiles.",
-  "cta": "Voir l'hébergement"
-},
+      "title": "DORMEZ AU CŒUR D'UN VILLAGE TYPIQUE",
+      "subtitle": "Nos hébergements situés très proche du centre du village vous permettent une grande autonomie — lever à l'aube, pêche au coucher du soleil, dîner sous les étoiles.",
+      "cta": "Voir l'hébergement"
+    },
     "whatsapp": {
       "title": "UNE QUESTION ? UN PROJET ?",
       "subtitle": "Répondons-y directement sur WhatsApp.",
@@ -44,14 +44,14 @@
     }
   },
   "stays": {
-    "title": "NOS SÉJOURS",
+    "title": "SÉJOURS DE PÊCHE EN EXTREMADURA",
     "subtitle": "Des formules pensées pour tous les pêcheurs — du week-end express au séjour sur mesure.",
     "noPriceLine": "Contactez-nous pour connaître les tarifs",
     "contactCta": "Nous contacter pour le tarif",
     "includes": "Inclus dans le séjour"
   },
   "accommodation": {
-    "title": "HÉBERGEMENT",
+    "title": "HÉBERGEMENT POUR PÊCHEURS À VALDECABALLEROS",
     "subtitle": "Dormez au bord du lac dans nos villas de caractère.",
     "capacity": "Capacité",
     "contactCta": "Nous contacter pour disponibilités et tarifs",
@@ -62,7 +62,7 @@
     }
   },
   "species": {
-    "title": "LES ESPÈCES",
+    "title": "BLACK BASS, BROCHET, SANDRE EN EXTREMADURA",
     "subtitle": "Quatre carnassiers d'exception sur les eaux d'Extremadura.",
     "behavior": "Comportement",
     "techniques": "Techniques",
@@ -70,19 +70,19 @@
     "contactCta": "Réserver un séjour"
   },
   "gallery": {
-    "title": "GALERIE",
+    "title": "GALERIE — PÊCHE EN EXTREMADURA",
     "subtitle": "Aperçu de la vie sur le lac.",
     "notice": "Quelques instants capturés sur le terrain"
   },
   "blog": {
-    "title": "BLOG",
+    "title": "BLOG — CONSEILS PÊCHE EXTREMADURA",
     "subtitle": "Conseils, spots et retours du terrain.",
     "readMore": "Lire la suite",
     "backToBlog": "← Retour au blog",
     "contactCta": "Réserver votre séjour"
   },
   "contact": {
-    "title": "CONTACTEZ-NOUS",
+    "title": "CONTACTEZ DINI FISHING",
     "subtitle": "Plusieurs façons de nous joindre — choisissez celle qui vous convient.",
     "form": {
       "title": "FORMULAIRE DE CONTACT",
