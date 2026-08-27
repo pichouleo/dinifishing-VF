@@ -44,14 +44,14 @@
     }
   },
   "stays": {
-    "title": "OUR STAYS",
+    "title": "FISHING STAYS IN EXTREMADURA, SPAIN",
     "subtitle": "Packages designed for every angler — from a quick weekend to a custom stay.",
     "noPriceLine": "Contact us for pricing",
     "contactCta": "Contact us for pricing",
     "includes": "Included in the stay"
   },
   "accommodation": {
-    "title": "ACCOMMODATION",
+    "title": "ACCOMMODATION FOR ANGLERS IN VALDECABALLEROS",
     "subtitle": "Sleep lakeside in our characterful villas.",
     "capacity": "Capacity",
     "contactCta": "Contact us for availability and pricing",
@@ -62,7 +62,7 @@
     }
   },
   "species": {
-    "title": "THE SPECIES",
+    "title": "BLACK BASS, PIKE, ZANDER IN EXTREMADURA",
     "subtitle": "Four exceptional predators in Extremadura's waters.",
     "behavior": "Behavior",
     "techniques": "Techniques",
@@ -70,19 +70,19 @@
     "contactCta": "Book a stay"
   },
   "gallery": {
-    "title": "GALLERY",
+    "title": "GALLERY — FISHING IN EXTREMADURA",
     "subtitle": "A glimpse of life on the lake.",
     "notice": "A few moments captured in the field"
   },
   "blog": {
-    "title": "BLOG",
+    "title": "BLOG — EXTREMADURA FISHING TIPS",
     "subtitle": "Tips, spots and field reports.",
     "readMore": "Read more",
     "backToBlog": "← Back to blog",
     "contactCta": "Book your stay"
   },
   "contact": {
-    "title": "CONTACT US",
+    "title": "CONTACT DINI FISHING",
     "subtitle": "Several ways to reach us — choose the one that suits you.",
     "form": {
       "title": "CONTACT FORM",

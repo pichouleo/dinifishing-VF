@@ -44,14 +44,14 @@
     }
   },
   "stays": {
-    "title": "NUESTRAS ESTANCIAS",
+    "title": "ESTANCIAS DE PESCA EN EXTREMADURA",
     "subtitle": "Paquetes diseñados para todos los pescadores — desde un fin de semana rápido hasta una estancia a medida.",
     "noPriceLine": "Contáctenos para tarifas",
     "contactCta": "Contáctenos para tarifas",
     "includes": "Incluido en la estancia"
   },
   "accommodation": {
-    "title": "ALOJAMIENTO",
+    "title": "ALOJAMIENTO PARA PESCADORES EN VALDECABALLEROS",
     "subtitle": "Duerme a orillas del lago en nuestras villas con carácter.",
     "capacity": "Capacidad",
     "contactCta": "Contáctenos para disponibilidad y tarifas",
@@ -62,7 +62,7 @@
     }
   },
   "species": {
-    "title": "LAS ESPECIES",
+    "title": "BLACK BASS, LUCIO, LUCIOPERCA EN EXTREMADURA",
     "subtitle": "Cuatro depredadores excepcionales en las aguas de Extremadura.",
     "behavior": "Comportamiento",
     "techniques": "Técnicas",
@@ -70,19 +70,19 @@
     "contactCta": "Reservar una estancia"
   },
   "gallery": {
-    "title": "GALERÍA",
+    "title": "GALERÍA — PESCA EN EXTREMADURA",
     "subtitle": "Un vistazo a la vida en el lago.",
     "notice": "Algunos momentos capturados sobre el terreno"
   },
   "blog": {
-    "title": "BLOG",
+    "title": "BLOG — CONSEJOS PESCA EXTREMADURA",
     "subtitle": "Consejos, spots e informes de campo.",
     "readMore": "Leer más",
     "backToBlog": "← Volver al blog",
     "contactCta": "Reserva tu estancia"
   },
   "contact": {
-    "title": "CONTÁCTENOS",
+    "title": "CONTACTAR DINI FISHING",
     "subtitle": "Varias formas de contactarnos — elige la que más te convenga.",
     "form": {
       "title": "FORMULARIO DE CONTACTO",
