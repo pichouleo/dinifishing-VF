@@ -1,6 +1,7 @@
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import ContactForm from '@/components/ContactForm'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
   const t = useTranslations('contact')
+  const currentLocale = useLocale()
 
   const methods = [
     { icon: '📱', label: 'WhatsApp', value: '+33 6 68 17 87 43', href: 'https://wa.me/33668178743', color: 'bg-green-800' },
@@ -35,13 +37,13 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           {methods.map((m) => (
             <a key={m.label} href={m.href} target="_blank" rel="noopener noreferrer"
-  className={`${m.color} border border-noir-leger hover:border-rouge-sang p-4 text-center transition-colors group min-w-0 overflow-hidden`}>
-  <div className="text-3xl mb-2">{m.icon}</div>
-  <div className="font-bebas text-blanc-casse tracking-widest text-sm">{m.label}</div>
-  <div className="text-blanc-attenue text-xs mt-1 group-hover:text-rouge-sang transition-colors leading-tight">
-  {m.value}{m.value2 && <><br />{m.value2}</>}
-</div>
-</a>
+              className={`${m.color} border border-noir-leger hover:border-rouge-sang p-4 text-center transition-colors group min-w-0 overflow-hidden`}>
+              <div className="text-3xl mb-2">{m.icon}</div>
+              <div className="font-bebas text-blanc-casse tracking-widest text-sm">{m.label}</div>
+              <div className="text-blanc-attenue text-xs mt-1 group-hover:text-rouge-sang transition-colors leading-tight">
+                {m.value}{m.value2 && <><br />{m.value2}</>}
+              </div>
+            </a>
           ))}
         </div>
       </section>
@@ -51,6 +53,20 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
           <ContactForm />
         </div>
       </section>
+
+      {/* Liens internes */}
+      <div className="bg-noir-carte py-8 border-t border-noir-leger text-center">
+        <p className="text-blanc-attenue text-sm mb-4">Vous souhaitez en savoir plus ?</p>
+        <div className="flex flex-wrap gap-8 justify-center">
+          <Link href={`/${currentLocale}/sejours`} className="text-rouge-sang hover:text-rouge-fonce font-bebas tracking-widest transition-colors">
+            Voir nos séjours →
+          </Link>
+          <Link href={`/${currentLocale}/hebergement`} className="text-rouge-sang hover:text-rouge-fonce font-bebas tracking-widest transition-colors">
+            Voir l'hébergement →
+          </Link>
+        </div>
+      </div>
+
     </div>
   )
 }
