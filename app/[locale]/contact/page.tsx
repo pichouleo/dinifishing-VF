@@ -4,17 +4,30 @@ import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Contact — Réserver séjour pêche Extremadura — Dini Fishing',
-  description: 'Contactez Dini Fishing pour réserver votre séjour de pêche en Extremadura. WhatsApp +33 6 68 17 87 43. Guide disponible 7j/7.',
-  openGraph: {
-    title: 'Contact — Dini Fishing Extremadura',
-    description: 'Réservez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp.',
-    images: ['/image-hero.png'],
-  },
+interface Props { params: { locale: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Contact — Réserver séjour pêche Extremadura — Dini Fishing',
+    description: 'Contactez Dini Fishing pour réserver votre séjour de pêche en Extremadura. WhatsApp +33 6 68 17 87 43. Guide disponible 7j/7.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/contact`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/contact',
+        'en': 'https://dinifishing.com/en/contact',
+        'es': 'https://dinifishing.com/es/contact',
+      },
+    },
+    openGraph: {
+      title: 'Contact — Dini Fishing Extremadura',
+      description: 'Réservez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp.',
+      images: ['/image-hero.png'],
+    },
+  }
 }
 
-export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
+export default function ContactPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('contact')
   const currentLocale = useLocale()
@@ -53,8 +66,6 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
           <ContactForm />
         </div>
       </section>
-
-      {/* Liens internes */}
       <div className="bg-noir-carte py-8 border-t border-noir-leger text-center">
         <p className="text-blanc-attenue text-sm mb-4">Vous souhaitez en savoir plus ?</p>
         <div className="flex flex-wrap gap-8 justify-center">
@@ -66,7 +77,6 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
           </Link>
         </div>
       </div>
-
     </div>
   )
 }

@@ -6,17 +6,30 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Séjours de pêche en Extremadura — Black Bass, Brochet, Sandre — Dini Fishing',
-  description: 'Séjours de pêche aux carnassiers en Extremadura, Espagne. Pêche à la mouche, carnassiers au leurre, float tube. Guide expert à Valdecaballeros.',
-  openGraph: {
-    title: 'Séjours de pêche en Extremadura — Dini Fishing',
-    description: 'Séjours guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre. Venez avec votre propre bateau ou float tube.',
-    images: ['/sejours/background-sejours-extremadura.jpg'],
-  },
+interface Props { params: { locale: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Séjours de pêche en Extremadura — Black Bass, Brochet, Sandre — Dini Fishing',
+    description: 'Séjours de pêche aux carnassiers en Extremadura, Espagne. Pêche à la mouche, carnassiers au leurre, float tube. Guide expert à Valdecaballeros.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/sejours`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/sejours',
+        'en': 'https://dinifishing.com/en/sejours',
+        'es': 'https://dinifishing.com/es/sejours',
+      },
+    },
+    openGraph: {
+      title: 'Séjours de pêche en Extremadura — Dini Fishing',
+      description: 'Séjours guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre. Venez avec votre propre bateau ou float tube.',
+      images: ['/sejours/background-sejours-extremadura.jpg'],
+    },
+  }
 }
 
-export default function SejoursPage({ params: { locale } }: { params: { locale: string } }) {
+export default function SejoursPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('stays')
   const currentLocale = useLocale()
@@ -56,7 +69,6 @@ export default function SejoursPage({ params: { locale } }: { params: { locale: 
       <section className="py-16 bg-noir-carte border-t border-rouge-sang/30">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            {/* Image */}
             <div className="relative aspect-square overflow-hidden">
               <Image
                 src="/bateau.jpg"
@@ -69,7 +81,6 @@ export default function SejoursPage({ params: { locale } }: { params: { locale: 
                 LE SEUL À LE PROPOSER
               </div>
             </div>
-            {/* Texte */}
             <div>
               <p className="text-rouge-sang font-bebas tracking-widest text-sm mb-2">CE QUI NOUS REND UNIQUE</p>
               <h2 className="font-bebas text-4xl md:text-5xl text-blanc-casse tracking-widest mb-4">

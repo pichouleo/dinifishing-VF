@@ -2,16 +2,28 @@ import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Galerie — Pêche en Extremadura, Espagne — Dini Fishing',
-  description: 'Photos de pêche aux carnassiers en Extremadura — Black Bass, Brochet, Sandre, float tube, bateau. Séjours guidés avec Dini Fishing.',
-  openGraph: {
-    title: 'Galerie — Dini Fishing Extremadura',
-    description: 'Photos de pêche en Extremadura, Espagne. Carnassiers, float tube et lacs sauvages.',
-    images: ['/galerie/photo-01.jpg'],
-  },
-}
+interface Props { params: { locale: string } }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Galerie — Pêche en Extremadura, Espagne — Dini Fishing',
+    description: 'Photos de pêche aux carnassiers en Extremadura — Black Bass, Brochet, Sandre, float tube, bateau. Séjours guidés avec Dini Fishing.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/galerie`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/galerie',
+        'en': 'https://dinifishing.com/en/galerie',
+        'es': 'https://dinifishing.com/es/galerie',
+      },
+    },
+    openGraph: {
+      title: 'Galerie — Dini Fishing Extremadura',
+      description: 'Photos de pêche en Extremadura, Espagne. Carnassiers, float tube et lacs sauvages.',
+      images: ['/galerie/photo-01.jpg'],
+    },
+  }
+}
 
 const photos = [
   { src: '/galerie/photo-01.jpg', caption: 'Pêche carnassiers Extremadura' },
@@ -32,7 +44,7 @@ const photos = [
   { src: '/galerie/photo-16.jpg', caption: 'Pêche sportive Espagne' },
 ]
 
-export default function GaleriePage({ params: { locale } }: { params: { locale: string } }) {
+export default function GaleriePage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('gallery')
   return (
@@ -48,12 +60,12 @@ export default function GaleriePage({ params: { locale } }: { params: { locale: 
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {photos.map((photo, i) => (
               <div key={i} className="break-inside-avoid group relative overflow-hidden mb-4">
-                <img 
-                    src={photo.src} 
-                    alt={photo.caption || 'Dini Fishing - pêche Extremadura'} 
-                    loading="lazy"
-                    className="w-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                  />
+                <img
+                  src={photo.src}
+                  alt={photo.caption || 'Dini Fishing - pêche Extremadura'}
+                  loading="lazy"
+                  className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-noir-profond/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <p className="text-blanc-casse text-sm">{photo.caption}</p>
                 </div>

@@ -5,17 +5,30 @@ import VillaCard from '@/components/VillaCard'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Hébergement pêcheurs à Valdecaballeros, Extremadura — Dini Fishing',
-  description: 'Appartement et villa à Valdecaballeros, Extremadura. Hébergements idéaux pour les séjours de pêche aux carnassiers, proches des lacs Garcia Sola et Orellana.',
-  openGraph: {
-    title: 'Hébergement à Valdecaballeros — Dini Fishing',
-    description: 'Logements de caractère pour pêcheurs à Valdecaballeros, Extremadura. Proches des mises à l\'eau Garcia Sola, Orellana et Cijara.',
-    images: ['/images/hebergement/villa-1.jpg'],
-  },
+interface Props { params: { locale: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Hébergement pêcheurs à Valdecaballeros, Extremadura — Dini Fishing',
+    description: 'Appartement et villa à Valdecaballeros, Extremadura. Hébergements idéaux pour les séjours de pêche aux carnassiers, proches des lacs Garcia Sola et Orellana.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/hebergement`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/hebergement',
+        'en': 'https://dinifishing.com/en/hebergement',
+        'es': 'https://dinifishing.com/es/hebergement',
+      },
+    },
+    openGraph: {
+      title: 'Hébergement à Valdecaballeros — Dini Fishing',
+      description: 'Logements de caractère pour pêcheurs à Valdecaballeros, Extremadura. Proches des mises à l\'eau Garcia Sola, Orellana et Cijara.',
+      images: ['/images/hebergement/villa-1.png'],
+    },
+  }
 }
 
-export default function HebergementPage({ params: { locale } }: { params: { locale: string } }) {
+export default function HebergementPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('accommodation')
   const currentLocale = useLocale()
@@ -34,14 +47,14 @@ export default function HebergementPage({ params: { locale } }: { params: { loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {villas.map((villa) => (
-              <VillaCard 
-  key={villa.id} 
-  name={villa.name} 
-  images={villa.images} 
-  capacity={villa.capacity} 
-  description={villa.description} 
-  equipments={villa.features}
-/>
+              <VillaCard
+                key={villa.id}
+                name={villa.name}
+                images={villa.images}
+                capacity={villa.capacity}
+                description={villa.description}
+                equipments={villa.features}
+              />
             ))}
           </div>
         </div>

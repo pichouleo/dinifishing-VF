@@ -5,17 +5,30 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Pêche Black Bass, Brochet, Sandre en Extremadura — Dini Fishing',
-  description: 'Black Bass, Brochet, Sandre et Barbeau Comizo sur les lacs sauvages d\'Extremadura, Espagne. Techniques, comportements et meilleures saisons.',
-  openGraph: {
-    title: 'Espèces de pêche en Extremadura — Dini Fishing',
-    description: 'Pêchez le Black Bass, Brochet, Sandre et Barbeau Comizo en Extremadura, Espagne.',
-    images: ['/especes/blackbass.jpg'],
-  },
+interface Props { params: { locale: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Pêche Black Bass, Brochet, Sandre en Extremadura — Dini Fishing',
+    description: 'Black Bass, Brochet, Sandre et Barbeau Comizo sur les lacs sauvages d\'Extremadura, Espagne. Techniques, comportements et meilleures saisons.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/especes`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/especes',
+        'en': 'https://dinifishing.com/en/especes',
+        'es': 'https://dinifishing.com/es/especes',
+      },
+    },
+    openGraph: {
+      title: 'Espèces de pêche en Extremadura — Dini Fishing',
+      description: 'Pêchez le Black Bass, Brochet, Sandre et Barbeau Comizo en Extremadura, Espagne.',
+      images: ['/especes/blackbass.jpg'],
+    },
+  }
 }
 
-export default function EspecesPage({ params: { locale } }: { params: { locale: string } }) {
+export default function EspecesPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('species')
   const currentLocale = useLocale()

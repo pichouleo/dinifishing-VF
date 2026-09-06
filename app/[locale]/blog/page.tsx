@@ -4,17 +4,30 @@ import { articles } from '@/data/articles'
 import BlogCard from '@/components/BlogCard'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Blog pêche Extremadura — Spots, conseils carnassiers — Dini Fishing',
-  description: 'Articles sur la pêche aux carnassiers en Extremadura. Spots Black Bass, techniques brochet, pêche mouche Espagne. Par Cédric Gandini, guide professionnel.',
-  openGraph: {
-    title: 'Blog — Pêche en Extremadura — Dini Fishing',
-    description: 'Conseils et spots de pêche en Extremadura, Espagne. Black Bass, Brochet, Sandre.',
-    images: ['/blog/article-blackbass.jpg'],
-  },
+interface Props { params: { locale: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = params
+  return {
+    title: 'Blog pêche Extremadura — Spots, conseils carnassiers — Dini Fishing',
+    description: 'Articles sur la pêche aux carnassiers en Extremadura. Spots Black Bass, techniques brochet, pêche mouche Espagne. Par Cédric Gandini, guide professionnel.',
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}/blog`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr/blog',
+        'en': 'https://dinifishing.com/en/blog',
+        'es': 'https://dinifishing.com/es/blog',
+      },
+    },
+    openGraph: {
+      title: 'Blog — Pêche en Extremadura — Dini Fishing',
+      description: 'Conseils et spots de pêche en Extremadura, Espagne. Black Bass, Brochet, Sandre.',
+      images: ['/blog/article-blackbass.jpg'],
+    },
+  }
 }
 
-export default function BlogPage({ params: { locale } }: { params: { locale: string } }) {
+export default function BlogPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   const t = useTranslations('blog')
   const currentLocale = useLocale()
