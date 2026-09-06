@@ -4,6 +4,14 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Dini Fishing — Guide de pêche en Extremadura, Espagne',
   description: 'Séjours de pêche guidés aux carnassiers en Extremadura, Espagne. Black Bass, Brochet, Sandre. Venez avec votre propre bateau ou float tube.',
+  alternates: {
+    canonical: 'https://dinifishing.com/fr',
+    languages: {
+      'fr': 'https://dinifishing.com/fr',
+      'en': 'https://dinifishing.com/en',
+      'es': 'https://dinifishing.com/es',
+    },
+  },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
@@ -43,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html>
       <head>
+        <link rel="preload" as="image" href="/image-hero.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
