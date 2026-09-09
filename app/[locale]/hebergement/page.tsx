@@ -37,7 +37,7 @@ export default function HebergementPage({ params: { locale } }: Props) {
     <div className="min-h-screen bg-noir-profond pt-20">
       <AnimatedSection>
         <section className="relative py-24 flex items-center justify-center overflow-hidden"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          style={{ backgroundImage: 'url(/hebergements/background-hebergements.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="absolute inset-0 bg-noir-profond/80" />
           <div className="relative z-10 text-center px-4">
             <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
