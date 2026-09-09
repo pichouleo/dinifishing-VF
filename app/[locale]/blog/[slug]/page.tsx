@@ -15,7 +15,23 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articles.find((a) => a.slug === params.slug)
   if (!article) return {}
-  return { title: `${article.title} — Dini Fishing`, description: article.excerpt, openGraph: { title: article.title, description: article.excerpt, images: [article.image] } }
+  return {
+    title: `${article.title} — Dini Fishing`,
+    description: article.excerpt,
+    alternates: {
+      canonical: `https://dinifishing.com/${params.locale}/blog/${params.slug}`,
+      languages: {
+        'fr': `https://dinifishing.com/fr/blog/${params.slug}`,
+        'en': `https://dinifishing.com/en/blog/${params.slug}`,
+        'es': `https://dinifishing.com/es/blog/${params.slug}`,
+      },
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      images: [article.image],
+    },
+  }
 }
 
 export default function BlogPostPage({ params }: Props) {
