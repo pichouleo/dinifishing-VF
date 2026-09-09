@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
+import AnimatedSection from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
 
 interface Props { params: { locale: string } }
@@ -41,11 +42,14 @@ export default function ContactPage({ params: { locale } }: Props) {
 
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
+      <AnimatedSection>
       <section className="py-16 text-center px-4">
         <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
         <p className="text-blanc-attenue text-lg mt-4 max-w-2xl mx-auto">{t('subtitle')}</p>
         <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
       </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           {methods.map((m) => (
@@ -60,12 +64,15 @@ export default function ContactPage({ params: { locale } }: Props) {
           ))}
         </div>
       </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="pb-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <h2 className="font-bebas text-3xl text-blanc-casse tracking-widest mb-8 text-center">{t('form.title')}</h2>
           <ContactForm />
         </div>
       </section>
+      </AnimatedSection>
       <div className="bg-noir-carte py-8 border-t border-noir-leger text-center">
         <p className="text-blanc-attenue text-sm mb-4">Vous souhaitez en savoir plus ?</p>
         <div className="flex flex-wrap gap-8 justify-center">

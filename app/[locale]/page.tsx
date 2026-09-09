@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection'
 import SpeciesCard from '@/components/SpeciesCard'
 import { species } from '@/data/species'
 import Image from 'next/image'
+import AnimatedSection from '@/components/AnimatedSection'
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
@@ -21,6 +22,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
   return (
     <>
+    <AnimatedSection>
       <HeroSection
         title1={t('heroTitle1')}
         title2={t('heroTitle2')}
@@ -32,8 +34,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         cta2Href={`/${currentLocale}/contact`}
         imageUrl="/image-hero.png"
       />
+      </AnimatedSection>
 
       {/* Arguments */}
+      <AnimatedSection>
       <section className="py-20 bg-noir-profond">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-bebas text-4xl md:text-5xl text-blanc-casse tracking-widest text-center mb-12">
@@ -52,8 +56,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Featured species */}
+      <AnimatedSection>
       <section className="py-20 bg-noir-carte">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-12">
@@ -86,44 +92,49 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
         </div>
       </section>
+      </AnimatedSection>
+
             {/* Matériel perso - Argument unique */}
-<section className="py-16 bg-noir-profond border-y border-rouge-sang/30">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-10">
-      <p className="text-rouge-sang font-bebas tracking-widest text-sm mb-2">NOTRE DIFFÉRENCE</p>
-      <h2 className="font-bebas text-4xl md:text-5xl text-blanc-casse tracking-widest mb-4">
-        VENEZ AVEC VOTRE PROPRE MATÉRIEL
-      </h2>
-      <p className="text-blanc-attenue text-lg max-w-2xl mx-auto">
-        Dini Fishing est l'un des seuls guides à vous accueillir avec votre propre bateau, float tube ou matériel de pêche. Pêchez comme vous en avez l'habitude, dans un cadre exceptionnel.
-      </p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors p-8 text-center">
-        <div className="text-4xl mb-4">🚤</div>
-        <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">VOTRE BATEAU</h3>
-        <p className="text-blanc-attenue text-sm">Mettez à l'eau votre propre bateau sur nos spots. Accès direct aux mises à l'eau des barrages d'Extremadura.</p>
-      </div>
-      <div className="bg-noir-carte border border-rouge-sang p-8 text-center relative">
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-rouge-sang text-white font-bebas text-xs tracking-widest px-4 py-1">EXCLUSIF</div>
-        <div className="text-4xl mb-4">🛶</div>
-        <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">FLOAT TUBE</h3>
-        <p className="text-blanc-attenue text-sm">Naviguez en toute liberté avec votre float tube sur des spots inaccessibles autrement.</p>
-      </div>
-      <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors p-8 text-center">
-        <div className="text-4xl mb-4">🎣</div>
-        <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">VOTRE MATÉRIEL</h3>
-        <p className="text-blanc-attenue text-sm">Pêchez avec vos cannes, vos leurres, vos techniques. Le guide s'adapte à vous, pas l'inverse.</p>
-      </div>
-    </div>
-    <div className="text-center mt-10">
-      <Link href={`/${currentLocale}/contact`} className="inline-block bg-rouge-sang hover:bg-rouge-fonce text-white font-bebas tracking-widest text-lg px-10 py-4 transition-colors">
-        ORGANISER MON SÉJOUR →
-      </Link>
-    </div>
-  </div>
-</section>
+            <AnimatedSection>
+              <section className="py-16 bg-noir-profond border-y border-rouge-sang/30">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center mb-10">
+                    <p className="text-rouge-sang font-bebas tracking-widest text-sm mb-2">NOTRE DIFFÉRENCE</p>
+                    <h2 className="font-bebas text-4xl md:text-5xl text-blanc-casse tracking-widest mb-4">
+                      VENEZ AVEC VOTRE PROPRE MATÉRIEL
+                    </h2>
+                    <p className="text-blanc-attenue text-lg max-w-2xl mx-auto">
+                      Dini Fishing est l'un des seuls guides à vous accueillir avec votre propre bateau, float tube ou matériel de pêche. Pêchez comme vous en avez l'habitude, dans un cadre exceptionnel.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors p-8 text-center">
+                      <div className="text-4xl mb-4">🚤</div>
+                      <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">VOTRE BATEAU</h3>
+                      <p className="text-blanc-attenue text-sm">Mettez à l'eau votre propre bateau sur nos spots. Accès direct aux mises à l'eau des barrages d'Extremadura.</p>
+                    </div>
+                    <div className="bg-noir-carte border border-rouge-sang p-8 text-center relative">
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-rouge-sang text-white font-bebas text-xs tracking-widest px-4 py-1">EXCLUSIF</div>
+                      <div className="text-4xl mb-4">🛶</div>
+                      <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">FLOAT TUBE</h3>
+                      <p className="text-blanc-attenue text-sm">Naviguez en toute liberté avec votre float tube sur des spots inaccessibles autrement.</p>
+                    </div>
+                    <div className="bg-noir-carte border border-noir-leger hover:border-rouge-sang transition-colors p-8 text-center">
+                      <div className="text-4xl mb-4">🎣</div>
+                      <h3 className="font-bebas text-xl text-blanc-casse tracking-widest mb-2">VOTRE MATÉRIEL</h3>
+                      <p className="text-blanc-attenue text-sm">Pêchez avec vos cannes, vos leurres, vos techniques. Le guide s'adapte à vous, pas l'inverse.</p>
+                    </div>
+                  </div>
+                  <div className="text-center mt-10">
+                    <Link href={`/${currentLocale}/contact`} className="inline-block bg-rouge-sang hover:bg-rouge-fonce text-white font-bebas tracking-widest text-lg px-10 py-4 transition-colors">
+                      ORGANISER MON SÉJOUR →
+                    </Link>
+                  </div>
+                </div>
+              </section>
+            </AnimatedSection>
       {/* Accommodation */}
+      <AnimatedSection>
       <section className="py-20 bg-noir-profond">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -143,8 +154,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* WhatsApp CTA */}
+      <AnimatedSection>
       <section className="py-16 bg-rouge-sang">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-bebas text-4xl md:text-5xl text-white tracking-widest mb-4">{t('whatsapp.title')}</h2>
@@ -155,6 +168,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </a>
         </div>
       </section>
+      </AnimatedSection>
     </>
   )
 }

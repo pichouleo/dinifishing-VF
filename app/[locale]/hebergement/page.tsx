@@ -4,6 +4,7 @@ import { villas } from '@/data/villas'
 import VillaCard from '@/components/VillaCard'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AnimatedSection from '@/components/AnimatedSection'
 
 interface Props { params: { locale: string } }
 
@@ -34,15 +35,18 @@ export default function HebergementPage({ params: { locale } }: Props) {
   const currentLocale = useLocale()
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
-      <section className="relative py-24 flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-noir-profond/80" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
-          <p className="text-blanc-attenue text-lg mt-4 max-w-2xl mx-auto">{t('subtitle')}</p>
-          <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
-        </div>
-      </section>
+      <AnimatedSection>
+        <section className="relative py-24 flex items-center justify-center overflow-hidden"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="absolute inset-0 bg-noir-profond/80" />
+          <div className="relative z-10 text-center px-4">
+            <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
+            <p className="text-blanc-attenue text-lg mt-4 max-w-2xl mx-auto">{t('subtitle')}</p>
+            <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
+          </div>
+        </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -59,6 +63,8 @@ export default function HebergementPage({ params: { locale } }: Props) {
           </div>
         </div>
       </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="py-20 bg-noir-carte">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-bebas text-4xl md:text-5xl text-blanc-casse tracking-widest mb-6">{t('combine.title')}</h2>
@@ -68,6 +74,7 @@ export default function HebergementPage({ params: { locale } }: Props) {
           </Link>
         </div>
       </section>
+      </AnimatedSection>
     </div>
   )
 }

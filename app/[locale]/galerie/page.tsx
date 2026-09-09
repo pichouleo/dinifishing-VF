@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
+import AnimatedSection from '@/components/AnimatedSection'
 
 interface Props { params: { locale: string } }
 
@@ -49,12 +50,15 @@ export default function GaleriePage({ params: { locale } }: Props) {
   const t = useTranslations('gallery')
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
+      <AnimatedSection>
       <section className="py-16 text-center px-4">
         <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
         <p className="text-blanc-attenue text-lg mt-4">{t('subtitle')}</p>
         <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
         <p className="text-or-mat text-xs uppercase tracking-widest mt-4 italic">{t('notice')}</p>
       </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
@@ -74,6 +78,7 @@ export default function GaleriePage({ params: { locale } }: Props) {
           </div>
         </div>
       </section>
+      </AnimatedSection>
     </div>
   )
 }

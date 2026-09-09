@@ -5,6 +5,7 @@ import StayCard from '@/components/StayCard'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AnimatedSection from '@/components/AnimatedSection'
 
 interface Props { params: { locale: string } }
 
@@ -35,18 +36,23 @@ export default function SejoursPage({ params: { locale } }: Props) {
   const currentLocale = useLocale()
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
-      <section className="relative py-24 flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: 'url(/sejours/background-sejours-extremadura.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-noir-profond/80" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
-          <p className="text-blanc-attenue text-lg mt-4 max-w-2xl mx-auto">{t('subtitle')}</p>
-          <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
-        </div>
-      </section>
+      <AnimatedSection>
+        <section className="relative py-24 flex items-center justify-center overflow-hidden"
+          style={{ backgroundImage: 'url(/sejours/background-sejours-extremadura.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="absolute inset-0 bg-noir-profond/80" />
+          <div className="relative z-10 text-center px-4">
+            <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>
+            <p className="text-blanc-attenue text-lg mt-4 max-w-2xl mx-auto">{t('subtitle')}</p>
+            <div className="w-16 h-0.5 bg-rouge-sang mx-auto mt-6" />
+          </div>
+        </section>
+      </AnimatedSection>
+      <AnimatedSection>
       <div className="bg-noir-carte border-y border-noir-leger py-4 text-center">
         <p className="text-or-mat text-sm uppercase tracking-widest">{t('noPriceLine')}</p>
       </div>
+      </AnimatedSection>
+      <AnimatedSection>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,7 +70,8 @@ export default function SejoursPage({ params: { locale } }: Props) {
           </div>
         </div>
       </section>
-
+      </AnimatedSection>     
+      <AnimatedSection>   
       {/* Matériel perso */}
       <section className="py-16 bg-noir-carte border-t border-rouge-sang/30">
         <div className="max-w-6xl mx-auto px-4">
@@ -127,7 +134,9 @@ export default function SejoursPage({ params: { locale } }: Props) {
           </div>
         </div>
       </section>
-
+      </AnimatedSection>
+      
+      <AnimatedSection>
       {/* Lien interne espèces */}
       <div className="bg-noir-profond py-8 border-t border-noir-leger text-center">
         <p className="text-blanc-attenue text-sm mb-3">Vous ne savez pas quelle espèce cibler ?</p>
@@ -135,6 +144,7 @@ export default function SejoursPage({ params: { locale } }: Props) {
           Découvrir toutes les espèces →
         </Link>
       </div>
+      </AnimatedSection>
 
     </div>
   )
