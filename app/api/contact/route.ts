@@ -13,7 +13,7 @@ export async function POST(request: Request) {
         'content-type': 'application/json',
       },
       body: JSON.stringify({
-        sender: { name: 'Dini Fishing', email: 'contact@dinifishing.com' },,
+        sender: { name: 'Dini Fishing', email: 'contact@dinifishing.com' },
         to: [{ email: 'dini.extremadura@hotmail.com', name: 'Dini Fishing' }],
         replyTo: { email: from_email, name: from_name },
         subject: `Nouvelle demande - ${subject}`,
