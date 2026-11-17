@@ -45,7 +45,7 @@ export default function BlogPage({ params: { locale } }: Props) {
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {articles.map((article) => (
+            {[...articles].sort((a, b) => b.date.localeCompare(a.date)).map((article) => (
               <BlogCard key={article.id} title={article.title} excerpt={article.excerpt} date={article.date} image={article.image} slug={article.slug} />
             ))}
           </div>

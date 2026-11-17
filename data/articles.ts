@@ -204,4 +204,72 @@ Actuellement, je suis en train de le vivre et j'espère que je ne me réveillera
 *Retrouvez l'article original sur [peche.com](https://www.peche.com/article/42506/cedric-gandini-s-epanouir-dans-un-metier-passion-et-transmettre)*
   `,
 },
+  {
+    id: '5',
+    slug: 'peche-brochet-sandre-automne-extremadura',
+    title: "Pêcher le brochet et le sandre en automne en Extremadura",
+    excerpt: "L'automne est l'un des plus beaux moments de l'année sur les barrages d'Extremadura. Eaux qui se rafraîchissent, lacs déserts, carnassiers actifs : voici comment aborder la saison.",
+    date: '2026-11-17',
+    image: '/blog/article-automne-carnassiers.jpg',
+    content: `
+# Pêcher le brochet et le sandre en automne en Extremadura
+
+Quand les premières fraîcheurs arrivent sur l'Extremadura, quelque chose change sur les grands barrages. L'eau perd quelques degrés, la lumière devient plus rasante, et les berges se vident. C'est, pour beaucoup de pêcheurs qui viennent ici, la plus belle période de l'année pour chercher le brochet et le sandre.
+
+Voici ce qu'il faut savoir pour aborder cette saison, et comment nous l'abordons en guidage.
+
+## Pourquoi l'automne change tout
+
+En été, la chaleur écrase la région et impose un rythme : on pêche tôt le matin, on s'abrite en milieu de journée, on repart le soir. L'automne desserre cette contrainte. Les journées restent douces, souvent entre quinze et vingt-deux degrés, et il devient possible de pêcher confortablement du lever au coucher du soleil.
+
+Pour le pêcheur, cela signifie surtout une chose : davantage d'heures utiles sur l'eau, sur des lacs où l'on ne croise presque personne.
+
+## Le brochet, chasseur à l'affût
+
+Le brochet d'Extremadura est un chasseur à l'affût, expert en embuscades. Il se poste dans les herbiers, les zones ombragées, et surtout dans les transitions entre zones profondes et zones peu profondes. Ces cassures sont des couloirs de chasse naturels, et c'est là qu'il faut concentrer ses efforts.
+
+À l'automne, les herbiers commencent à se clairsemer et les postes deviennent plus lisibles. Les arbres noyés, les pointes rocheuses et les entrées de criques reprennent toute leur importance.
+
+Ce qui fonctionne bien sur nos eaux à cette période :
+
+- Le streamer, pour une approche posée le long des bordures
+- Le leurre souple en linéaire lent, sur les cassures
+- Le leurre à palette, quand l'eau est teintée ou le ciel couvert
+- Le leurre de surface, encore efficace lors des belles journées douces
+
+Il n'y a pas de recette unique. Le brochet se pêche toute l'année en Extremadura, et c'est souvent l'observation du jour qui dicte la technique, plus que le calendrier.
+
+## Le sandre, régulier et accessible
+
+Le sandre a une réputation de poisson difficile, capricieux, réservé aux pêcheurs de grands fonds. Sur nos barrages, la réalité est plus simple.
+
+Le sandre d'Extremadura chasse à des créneaux alimentaires très réguliers tout au long de la journée. Pas besoin de se limiter à l'aube et au crépuscule : les fenêtres d'activité reviennent régulièrement, et il suffit souvent d'être au bon endroit au bon moment.
+
+Autre particularité locale, et elle compte beaucoup : il chasse ici à des profondeurs peu importantes. C'est une excellente nouvelle pour le poisson, car cela permet des relâches en parfaite santé, sans les dommages liés aux remontées brutales. Nous pratiquons le no-kill intégral, et cette configuration nous permet de préserver réellement la ressource.
+
+Côté technique, le leurre souple reste la base, complété par le leurre dur quand il faut couvrir du terrain ou provoquer une réaction.
+
+## Comment nous organisons les sessions d'automne
+
+La journée type se construit autour de l'eau, pas autour d'un planning. On commence souvent par les zones peu profondes dans la fraîcheur du matin, puis on suit l'activité au fil des heures, en alternant les postes et les techniques.
+
+Le premier jour est généralement consacré à la découverte des zones clés. Les barrages d'Extremadura sont vastes, et chaque sortie apprend quelque chose. Ne vous découragez pas si les premières heures sont calmes : c'est le temps nécessaire pour comprendre le plan d'eau du moment.
+
+## Venir avec votre propre matériel
+
+C'est ce qui nous distingue de la plupart des guides de la région. Vous pouvez venir avec votre propre bateau et le mettre à l'eau directement sur nos spots, avec votre float tube pour accéder à des zones inaccessibles autrement, ou simplement pêcher du bord : de nombreux postes sont accessibles depuis la rive.
+
+Vos cannes, vos leurres, vos habitudes. Le guide s'adapte à votre façon de pêcher, pas l'inverse.
+
+## Ce qu'il faut prévoir
+
+L'Extremadura reste ensoleillée à l'automne, mais les matins sur l'eau peuvent être frais. Le mieux est de s'habiller par couches : un sous-vêtement technique, une polaire légère, un coupe-vent imperméable. Des lunettes polarisantes sont indispensables, autant pour le confort que pour lire l'eau.
+
+Côté administratif, la pêche nécessite une licence valide pour la communauté autonome d'Extremadura. Nous nous occupons de ces formalités pour vous.
+
+## Envie de venir cet automne ?
+
+Les barrages d'Extremadura à cette période, ce sont des paysages ouverts, une lumière magnifique et des lacs que vous aurez presque pour vous. Si vous souhaitez organiser un séjour, écrivez-nous ou contactez-nous directement sur WhatsApp : nous construirons le programme selon vos espèces cibles, votre niveau et vos envies.
+    `,
+  },
 ]
