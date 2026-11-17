@@ -38,7 +38,7 @@ const schemaOrg = {
     latitude: 39.2167,
     longitude: -5.1167,
   },
-  image: 'https://dinifishing.com/image-hero.png',
+  image: 'https://dinifishing.com/image-hero.jpg',
   priceRange: '€€',
   openingHours: 'Mo-Su 07:00-21:00',
   sameAs: [
@@ -51,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html>
       <head>
-        <link rel="preload" as="image" href="/image-hero.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

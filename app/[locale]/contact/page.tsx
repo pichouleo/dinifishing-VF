@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: 'Contact — Dini Fishing Extremadura',
       description: 'Réservez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp.',
-      images: ['/image-hero.png'],
+      images: ['/image-hero.jpg'],
     },
   }
 }

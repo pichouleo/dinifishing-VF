@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   title1: string
@@ -17,10 +18,17 @@ export default function HeroSection({
   cta1Label, cta1Href, cta2Label, cta2Href, imageUrl
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover md:bg-center"
-        style={{ backgroundImage: `url(${imageUrl})`, backgroundPosition: '20% center' }}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-noir-profond">
+      <Image
+        src={imageUrl}
+        alt="Pêche aux carnassiers sur les lacs d'Extremadura, Espagne"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        quality={78}
+        className="object-cover"
+        style={{ objectPosition: '20% center' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-noir-profond/40 via-noir-profond/30 to-noir-profond" />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
