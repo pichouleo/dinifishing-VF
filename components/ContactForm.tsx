@@ -74,12 +74,17 @@ export default function ContactForm() {
       </div>
       <div>
         <label className="block text-or-mat text-xs uppercase tracking-widest mb-1">{t('subject')} *</label>
-        <select required name="subject" value={form.subject} onChange={handleChange} className={inputClass + " cursor-pointer"}>
-          <option value="">{t('placeholder.subject')}</option>
-          <option value="Séjour pêche">{t('subjectOptions.peche')}</option>
-          <option value="Location villa">{t('subjectOptions.villa')}</option>
-          <option value="Renseignement">{t('subjectOptions.info')}</option>
-        </select>
+        <div className="relative">
+          <select required name="subject" value={form.subject} onChange={handleChange} className={inputClass + " cursor-pointer appearance-none pr-10"}>
+            <option value="">{t('placeholder.subject')}</option>
+            <option value="Séjour pêche">{t('subjectOptions.peche')}</option>
+            <option value="Location villa">{t('subjectOptions.villa')}</option>
+            <option value="Renseignement">{t('subjectOptions.info')}</option>
+          </select>
+          <svg className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-blanc-casse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
