@@ -25,6 +25,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: titles[locale] || titles.fr,
     description: descriptions[locale] || descriptions.fr,
+    alternates: {
+      canonical: `https://dinifishing.com/${locale}`,
+      languages: {
+        'fr': 'https://dinifishing.com/fr',
+        'en': 'https://dinifishing.com/en',
+        'es': 'https://dinifishing.com/es',
+      },
+    },
     openGraph: {
       title: titles[locale] || titles.fr,
       description: descriptions[locale] || descriptions.fr,
