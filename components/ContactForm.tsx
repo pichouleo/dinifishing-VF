@@ -1,14 +1,10 @@
 'use client'
 import { useState, FormEvent } from 'react'
-import { useTranslations, useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function ContactForm() {
   const t = useTranslations('contact.form')
-  const locale = useLocale()
-  const router = useRouter()
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
 
   const [form, setForm] = useState({
     firstName: '', lastName: '', email: '', phone: '',
@@ -19,34 +15,28 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault()
-  setLoading(true)
-  setError('')
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
 
-  try {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        from_name: `${form.firstName} ${form.lastName}`,
-        from_email: form.email,
-        phone: form.phone,
-        subject: form.subject,
-        stay_type: form.stayType,
-        persons: form.persons,
-        period: form.period,
-        message: form.message,
-      }),
-    })
+    const whatsappMessage = `Bonjour Dini Fishing,
 
-    if (!response.ok) throw new Error('Erreur envoi')
-    router.push(`/${locale}/merci`)
-  } catch {
-    setError(t('errorMsg'))
-    setLoading(false)
+Nouvelle demande depuis le formulaire du site :
+
+Prénom : ${form.firstName}
+Nom : ${form.lastName}
+Email : ${form.email}
+Téléphone : ${form.phone || 'Non renseigné'}
+Objet : ${form.subject}
+Type de séjour : ${form.stayType || 'Non renseigné'}
+Nombre de personnes : ${form.persons || 'Non renseigné'}
+Période souhaitée : ${form.period || 'Non renseignée'}
+
+Message :
+${form.message}`
+
+    window.location.href = `https://wa.me/33617133263?text=${encodeURIComponent(whatsappMessage)}`
   }
-}
 
   const inputClass = "w-full bg-noir-leger border border-noir-leger focus:border-rouge-sang text-blanc-casse placeholder-blanc-attenue/50 px-4 py-3 outline-none transition-colors text-sm"
 
@@ -99,12 +89,6 @@ export default function ContactForm() {
         <label className="block text-or-mat text-xs uppercase tracking-widest mb-1">{t('message')} *</label>
         <textarea required name="message" value={form.message} onChange={handleChange} rows={5} className={inputClass + " resize-none"} placeholder={t('placeholder.message')} />
       </div>
-
-      {error && (
-        <div className="bg-rouge-sang/20 border border-rouge-sang text-blanc-casse px-4 py-3 text-sm">
-          {error}
-        </div>
-      )}
 
       <button
         type="submit"
