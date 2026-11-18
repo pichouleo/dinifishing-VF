@@ -43,6 +43,18 @@ const photos = [
   { src: '/galerie/photo-14.jpg', caption: 'Barbeau Comizo Extremadura' },
   { src: '/galerie/photo-15.jpg', caption: 'Nature préservée Extremadura' },
   { src: '/galerie/photo-16.jpg', caption: 'Pêche sportive Espagne' },
+  { src: '/galerie/photo-17.jpg', caption: 'Départ au lever du jour, lac de Valdecaballeros' },
+  { src: '/galerie/photo-18.jpg', caption: 'Black Bass pêché au lac Garcia Sola' },
+  { src: '/galerie/photo-19.jpg', caption: 'Sandre pêché en Extremadura' },
+  { src: '/galerie/photo-20.jpg', caption: 'Beau Black Bass pris depuis le bateau' },
+  { src: '/galerie/photo-21.jpg', caption: 'Black Bass à l’épuisette, pêche no-kill' },
+  { src: '/galerie/photo-22.jpg', caption: 'Doublé de carnassiers entre pêcheurs' },
+  { src: '/galerie/photo-23.jpg', caption: 'Brochet pêché au lac Garcia Sola' },
+  { src: '/galerie/photo-24.jpg', caption: 'Mise à l’eau des bass boats, Valdecaballeros' },
+  { src: '/galerie/photo-25.jpg', caption: 'Brochet du lac, guidage Dini Fishing' },
+  { src: '/galerie/photo-26.jpg', caption: 'Renard au bord du lac, nature préservée d’Extremadura' },
+  { src: '/galerie/photo-27.jpg', caption: 'Barbeau Comizo pêché en Extremadura' },
+  { src: '/galerie/photo-28.jpg', caption: 'Bass boat au pied des falaises du lac' },
 ]
 
 export default function GaleriePage({ params: { locale } }: Props) {

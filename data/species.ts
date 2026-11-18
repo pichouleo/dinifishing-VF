@@ -26,7 +26,7 @@ export const species: Species[] = [
     name: 'Brochet',
     nameEn: 'Pike',
     nameEs: 'Lucio',
-    image: '/especes/brochet.JPG',
+    image: '/especes/brochet.jpg',
     description: "Un prédateur redoutable, chasseur hors pair en embuscade.",
     descriptionEn: "A formidable predator, an outstanding ambush hunter.",
     descriptionEs: "Un depredador formidable, un cazador excepcional en emboscada.",
