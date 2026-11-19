@@ -73,7 +73,11 @@ export default function BlogPostPage({ params }: Props) {
   }
 
   const renderContent = (content: string) => {
-    return content.trim().split('\n\n').map((para, i) => {
+    const blocks = content.trim().split('\n\n')
+    // Chaque article commence par « # Titre », déjà rendu en H1 par l'en-tête de
+    // la page : sans ça le titre s'affiche deux fois et la page a deux H1.
+    if (blocks[0]?.startsWith('# ')) blocks.shift()
+    return blocks.map((para, i) => {
       if (para.startsWith('# ')) return <h1 key={i} className="font-bebas text-4xl text-blanc-casse tracking-widest mt-8 mb-4">{para.slice(2)}</h1>
       if (para.startsWith('## ')) return <h2 key={i} className="font-bebas text-3xl text-rouge-sang tracking-widest mt-8 mb-4">{para.slice(3)}</h2>
       if (para.startsWith('### ')) return <h3 key={i} className="font-bebas text-2xl text-or-mat tracking-widest mt-6 mb-3">{para.slice(4)}</h3>
