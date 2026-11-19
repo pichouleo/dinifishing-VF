@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
 import AnimatedSection from '@/components/AnimatedSection'
@@ -9,9 +9,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.contact' })
   return {
-    title: 'Contact — Réserver séjour pêche Extremadura — Dini Fishing',
-    description: 'Contactez Dini Fishing pour réserver votre séjour de pêche en Extremadura. WhatsApp +33 6 68 17 87 43. Guide disponible 7j/7.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/contact`,
       languages: {
@@ -21,8 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Contact — Dini Fishing Extremadura',
-      description: 'Réservez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
+      locale,
       images: ['/image-hero.jpg'],
     },
   }

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import AnimatedSection from '@/components/AnimatedSection'
 
@@ -7,9 +7,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.gallery' })
   return {
-    title: 'Galerie — Pêche en Extremadura, Espagne — Dini Fishing',
-    description: 'Photos de pêche aux carnassiers en Extremadura — Black Bass, Brochet, Sandre, float tube, bateau. Séjours guidés avec Dini Fishing.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/galerie`,
       languages: {
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Galerie — Dini Fishing Extremadura',
-      description: 'Photos de pêche en Extremadura, Espagne. Carnassiers, float tube et lacs sauvages.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
+      locale,
       images: ['/galerie/photo-01.jpg'],
     },
   }

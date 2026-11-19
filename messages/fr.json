@@ -78,8 +78,9 @@
     "title": "BLOG — CONSEILS PÊCHE EXTREMADURA",
     "subtitle": "Conseils, spots et retours du terrain.",
     "readMore": "Lire la suite",
-    "backToBlog": "← Retour au blog",
-    "contactCta": "Réserver votre séjour"
+    "backToBlog": "Retour au blog",
+    "contactCta": "Réserver votre séjour",
+    "bookStay": "Réserver un séjour"
   },
   "contact": {
     "title": "CONTACTEZ DINI FISHING",
@@ -125,5 +126,83 @@
     "slogan": "Nature. Passion. Bonne humeur.",
     "location": "Valdecaballeros, Extremadura, Espagne",
     "rights": "Tous droits réservés."
+  },
+  "meta": {
+    "home": {
+      "title": "Dini Fishing — Guide de Pêche Extremadura, Espagne",
+      "description": "Séjours de pêche guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre, Barbeau Comizo. Hébergements au bord du lac.",
+      "ogTitle": "Dini Fishing — Guide de pêche en Extremadura",
+      "ogDescription": "Pêche aux carnassiers sur les grands barrages d'Extremadura, en bateau, en float tube ou du bord."
+    },
+    "stays": {
+      "title": "Séjours de pêche en Extremadura — Black Bass, Brochet, Sandre — Dini Fishing",
+      "description": "Séjours de pêche aux carnassiers en Extremadura, Espagne. Pêche à la mouche, carnassiers au leurre, float tube. Guide professionnel à Valdecaballeros.",
+      "ogTitle": "Séjours de pêche en Extremadura — Dini Fishing",
+      "ogDescription": "Séjours guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre. Venez avec votre propre bateau ou votre float tube."
+    },
+    "accommodation": {
+      "title": "Hébergement pêcheurs à Valdecaballeros, Extremadura — Dini Fishing",
+      "description": "Appartement et villa à Valdecaballeros, Extremadura. Hébergements pensés pour les séjours de pêche, proches des lacs Garcia Sola et Orellana.",
+      "ogTitle": "Hébergement à Valdecaballeros — Dini Fishing",
+      "ogDescription": "Logements de caractère pour pêcheurs à Valdecaballeros, proches des mises à l'eau Garcia Sola, Orellana et Cijara."
+    },
+    "species": {
+      "title": "Pêche Black Bass, Brochet, Sandre en Extremadura — Dini Fishing",
+      "description": "Black Bass, Brochet, Sandre et Barbeau Comizo sur les lacs sauvages d'Extremadura, Espagne. Comportements, techniques et meilleures saisons.",
+      "ogTitle": "Espèces de pêche en Extremadura — Dini Fishing",
+      "ogDescription": "Pêchez le Black Bass, le Brochet, le Sandre et le Barbeau Comizo en Extremadura, Espagne."
+    },
+    "gallery": {
+      "title": "Galerie — Pêche en Extremadura, Espagne — Dini Fishing",
+      "description": "Photos de pêche aux carnassiers en Extremadura — Black Bass, Brochet, Sandre, float tube, bateau. Séjours guidés avec Dini Fishing.",
+      "ogTitle": "Galerie — Dini Fishing Extremadura",
+      "ogDescription": "Photos de pêche en Extremadura, Espagne. Carnassiers, float tube et lacs sauvages."
+    },
+    "blog": {
+      "title": "Blog pêche Extremadura — Spots et conseils carnassiers — Dini Fishing",
+      "description": "Articles sur la pêche aux carnassiers en Extremadura. Spots Black Bass, techniques brochet, pêche à la mouche en Espagne. Par Cédric Gandini, guide professionnel.",
+      "ogTitle": "Blog — Pêche en Extremadura — Dini Fishing",
+      "ogDescription": "Conseils et spots de pêche en Extremadura, Espagne. Black Bass, Brochet, Sandre."
+    },
+    "contact": {
+      "title": "Contact — Réserver un séjour de pêche en Extremadura — Dini Fishing",
+      "description": "Contactez Dini Fishing pour organiser votre séjour de pêche en Extremadura. WhatsApp +33 6 68 17 87 43. Réponse rapide, programme sur mesure.",
+      "ogTitle": "Contact — Dini Fishing Extremadura",
+      "ogDescription": "Organisez votre séjour de pêche aux carnassiers en Extremadura. Réponse rapide par WhatsApp."
+    },
+    "legal": {
+      "title": "Mentions légales — Dini Fishing",
+      "description": "Mentions légales et politique de confidentialité du site Dini Fishing, guide de pêche en Extremadura, Espagne.",
+      "ogTitle": "Mentions légales — Dini Fishing",
+      "ogDescription": "Informations légales du site Dini Fishing."
+    }
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "editorHeading": "1. Éditeur du site",
+    "labelName": "Nom commercial :",
+    "labelManager": "Responsable :",
+    "labelNif": "Numéro d'identification (NIF) :",
+    "labelAddress": "Adresse :",
+    "labelEmail": "Email :",
+    "labelPhone": "Téléphone :",
+    "addressValue": "Valdecaballeros, Extremadura, Espagne",
+    "hostingHeading": "2. Hébergement",
+    "labelHost": "Hébergeur :",
+    "hostAddressValue": "512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis",
+    "labelSite": "Site :",
+    "ipHeading": "3. Propriété intellectuelle",
+    "ipBody": "L'ensemble du contenu de ce site (textes, images, logos, vidéos) est la propriété exclusive de Dini Fishing, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation préalable écrite est interdite.",
+    "gdprHeading": "4. Données personnelles (RGPD)",
+    "gdprP1": "Les données collectées via le formulaire de contact (nom, email, téléphone) sont utilisées uniquement pour répondre à vos demandes et organiser vos séjours de pêche.",
+    "gdprP2": "Elles ne sont jamais vendues ni transmises à des tiers.",
+    "gdprP3": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant :",
+    "cookiesHeading": "5. Cookies",
+    "cookiesBody": "Ce site n'utilise pas de cookies publicitaires ou de tracking. Seuls des cookies techniques nécessaires au bon fonctionnement du site peuvent être utilisés.",
+    "liabilityHeading": "6. Responsabilité",
+    "liabilityBody": "Dini Fishing s'efforce de maintenir les informations de ce site à jour et exactes. Cependant, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité des informations diffusées. Dini Fishing ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site.",
+    "lawHeading": "7. Droit applicable",
+    "lawBody": "Le présent site est soumis au droit espagnol. En cas de litige, les tribunaux espagnols seront seuls compétents.",
+    "backHome": "Retour à l'accueil"
   }
 }

@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
-import { articles } from '@/data/articles'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
+import { articles, pick } from '@/data/articles'
 import BlogCard from '@/components/BlogCard'
 import type { Metadata } from 'next'
 import AnimatedSection from '@/components/AnimatedSection'
@@ -9,9 +9,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.blog' })
   return {
-    title: 'Blog pêche Extremadura — Spots, conseils carnassiers — Dini Fishing',
-    description: 'Articles sur la pêche aux carnassiers en Extremadura. Spots Black Bass, techniques brochet, pêche mouche Espagne. Par Cédric Gandini, guide professionnel.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/blog`,
       languages: {
@@ -21,9 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Blog — Pêche en Extremadura — Dini Fishing',
-      description: 'Conseils et spots de pêche en Extremadura, Espagne. Black Bass, Brochet, Sandre.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
       images: ['/blog/article-blackbass.jpg'],
+      locale,
     },
   }
 }
@@ -46,7 +48,7 @@ export default function BlogPage({ params: { locale } }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[...articles].sort((a, b) => b.date.localeCompare(a.date)).map((article) => (
-              <BlogCard key={article.id} title={article.title} excerpt={article.excerpt} date={article.date} image={article.image} slug={article.slug} />
+              <BlogCard key={article.id} title={pick(article.title, currentLocale)} excerpt={pick(article.excerpt, currentLocale)} date={article.date} image={article.image} slug={article.slug} />
             ))}
           </div>
         </div>

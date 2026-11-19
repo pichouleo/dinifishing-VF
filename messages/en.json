@@ -78,8 +78,9 @@
     "title": "BLOG — EXTREMADURA FISHING TIPS",
     "subtitle": "Tips, spots and field reports.",
     "readMore": "Read more",
-    "backToBlog": "← Back to blog",
-    "contactCta": "Book your stay"
+    "backToBlog": "Back to the blog",
+    "contactCta": "Book your stay",
+    "bookStay": "Book a stay"
   },
   "contact": {
     "title": "CONTACT DINI FISHING",
@@ -125,5 +126,83 @@
     "slogan": "Nature. Passion. Good vibes.",
     "location": "Valdecaballeros, Extremadura, Spain",
     "rights": "All rights reserved."
+  },
+  "meta": {
+    "home": {
+      "title": "Dini Fishing — Fishing Guide Extremadura, Spain",
+      "description": "Guided predator fishing stays in Extremadura, Spain. Pike, Black Bass, Zander, Comizo Barbel. Lakeside accommodation.",
+      "ogTitle": "Dini Fishing — Fishing guide in Extremadura",
+      "ogDescription": "Predator fishing on the great reservoirs of Extremadura, by boat, from a float tube or from the bank."
+    },
+    "stays": {
+      "title": "Fishing trips in Extremadura — Black Bass, Pike, Zander — Dini Fishing",
+      "description": "Guided predator fishing trips in Extremadura, Spain. Fly fishing, lure fishing, float tube. Professional guide based in Valdecaballeros.",
+      "ogTitle": "Fishing trips in Extremadura — Dini Fishing",
+      "ogDescription": "Guided predator fishing in Extremadura. Pike, Black Bass, Zander. Come with your own boat or your float tube."
+    },
+    "accommodation": {
+      "title": "Accommodation for anglers in Valdecaballeros, Extremadura — Dini Fishing",
+      "description": "Apartment and villa in Valdecaballeros, Extremadura. Accommodation designed for fishing trips, close to the Garcia Sola and Orellana reservoirs.",
+      "ogTitle": "Accommodation in Valdecaballeros — Dini Fishing",
+      "ogDescription": "Characterful lodgings for anglers in Valdecaballeros, close to the Garcia Sola, Orellana and Cijara launch ramps."
+    },
+    "species": {
+      "title": "Black Bass, Pike and Zander fishing in Extremadura — Dini Fishing",
+      "description": "Black Bass, Pike, Zander and Comizo Barbel on the wild lakes of Extremadura, Spain. Behaviour, techniques and the best seasons.",
+      "ogTitle": "Fish species in Extremadura — Dini Fishing",
+      "ogDescription": "Fish for Black Bass, Pike, Zander and Comizo Barbel in Extremadura, Spain."
+    },
+    "gallery": {
+      "title": "Gallery — Fishing in Extremadura, Spain — Dini Fishing",
+      "description": "Predator fishing photos from Extremadura — Black Bass, Pike, Zander, float tube, boat. Guided trips with Dini Fishing.",
+      "ogTitle": "Gallery — Dini Fishing Extremadura",
+      "ogDescription": "Fishing photos from Extremadura, Spain. Predators, float tube and wild lakes."
+    },
+    "blog": {
+      "title": "Extremadura fishing blog — Spots and predator tips — Dini Fishing",
+      "description": "Articles on predator fishing in Extremadura. Black Bass spots, pike techniques, fly fishing in Spain. By Cédric Gandini, professional guide.",
+      "ogTitle": "Blog — Fishing in Extremadura — Dini Fishing",
+      "ogDescription": "Fishing advice and spots in Extremadura, Spain. Black Bass, Pike, Zander."
+    },
+    "contact": {
+      "title": "Contact — Book a fishing trip in Extremadura — Dini Fishing",
+      "description": "Contact Dini Fishing to plan your fishing trip in Extremadura. WhatsApp +33 6 68 17 87 43. Quick reply, tailor-made programme.",
+      "ogTitle": "Contact — Dini Fishing Extremadura",
+      "ogDescription": "Plan your predator fishing trip in Extremadura. Quick reply on WhatsApp."
+    },
+    "legal": {
+      "title": "Legal notice — Dini Fishing",
+      "description": "Legal notice and privacy policy for the Dini Fishing website, fishing guide in Extremadura, Spain.",
+      "ogTitle": "Legal notice — Dini Fishing",
+      "ogDescription": "Legal information for the Dini Fishing website."
+    }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "editorHeading": "1. Site publisher",
+    "labelName": "Trading name:",
+    "labelManager": "Person responsible:",
+    "labelNif": "Tax identification number (NIF):",
+    "labelAddress": "Address:",
+    "labelEmail": "Email:",
+    "labelPhone": "Phone:",
+    "addressValue": "Valdecaballeros, Extremadura, Spain",
+    "hostingHeading": "2. Hosting",
+    "labelHost": "Host:",
+    "hostAddressValue": "512 2nd Street, Suite 200, San Francisco, CA 94107, United States",
+    "labelSite": "Website:",
+    "ipHeading": "3. Intellectual property",
+    "ipBody": "All content on this site (text, images, logos, videos) is the exclusive property of Dini Fishing unless stated otherwise. Any reproduction, distribution or use without prior written permission is prohibited.",
+    "gdprHeading": "4. Personal data (GDPR)",
+    "gdprP1": "The data collected through the contact form (name, email, phone) is used solely to answer your enquiries and to organise your fishing trips.",
+    "gdprP2": "It is never sold or passed on to third parties.",
+    "gdprP3": "In accordance with the General Data Protection Regulation (GDPR), you have the right to access, correct and delete your data by contacting:",
+    "cookiesHeading": "5. Cookies",
+    "cookiesBody": "This site does not use advertising or tracking cookies. Only technical cookies necessary for the site to work properly may be used.",
+    "liabilityHeading": "6. Liability",
+    "liabilityBody": "Dini Fishing makes every effort to keep the information on this site accurate and up to date. However, we cannot guarantee the accuracy, completeness or timeliness of the information published. Dini Fishing cannot be held liable for any direct or indirect damage arising from the use of this site.",
+    "lawHeading": "7. Governing law",
+    "lawBody": "This site is governed by Spanish law. In the event of a dispute, the Spanish courts shall have sole jurisdiction.",
+    "backHome": "Back to home"
   }
 }
