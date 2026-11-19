@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
+import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -12,19 +12,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const titles: Record<string, string> = {
-    fr: 'Dini Fishing — Guide de Pêche Extremadura, Espagne',
-    en: 'Dini Fishing — Fishing Guide Extremadura, Spain',
-    es: 'Dini Fishing — Guía de Pesca Extremadura, España',
-  }
-  const descriptions: Record<string, string> = {
-    fr: 'Séjours de pêche guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre, Barbeau Comizo. Villas bord du lac.',
-    en: 'Guided predator fishing stays in Extremadura, Spain. Pike, Bass, Zander, Comizo Barbel. Lakeside villas.',
-    es: 'Estancias de pesca guiada a carnívoros en Extremadura. Lucio, Black Bass, Lucioperca, Barbo Comizo.',
-  }
+  const m = await getTranslations({ locale, namespace: 'meta.home' })
   return {
-    title: titles[locale] || titles.fr,
-    description: descriptions[locale] || descriptions.fr,
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}`,
       languages: {
@@ -34,8 +25,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       },
     },
     openGraph: {
-      title: titles[locale] || titles.fr,
-      description: descriptions[locale] || descriptions.fr,
+      title: m('ogTitle'),
+      description: m('ogDescription'),
       siteName: 'Dini Fishing',
       locale,
     },

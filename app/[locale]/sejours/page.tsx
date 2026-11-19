@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { stays } from '@/data/stays'
 import StayCard from '@/components/StayCard'
 import Image from 'next/image'
@@ -11,9 +11,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.stays' })
   return {
-    title: 'Séjours de pêche en Extremadura — Black Bass, Brochet, Sandre — Dini Fishing',
-    description: 'Séjours de pêche aux carnassiers en Extremadura, Espagne. Pêche à la mouche, carnassiers au leurre, float tube. Guide expert à Valdecaballeros.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/sejours`,
       languages: {
@@ -23,8 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Séjours de pêche en Extremadura — Dini Fishing',
-      description: 'Séjours guidés aux carnassiers en Extremadura. Brochet, Black Bass, Sandre. Venez avec votre propre bateau ou float tube.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
+      locale,
       images: ['/sejours/background-sejours-extremadura.jpg'],
     },
   }
@@ -37,8 +39,8 @@ export default function SejoursPage({ params: { locale } }: Props) {
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <AnimatedSection>
-        <section className="relative py-24 flex items-center justify-center overflow-hidden"
-          style={{ backgroundImage: 'url(/sejours/background-sejours-extremadura.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section className="relative py-24 flex items-center justify-center overflow-hidden">
+          <Image src="/sejours/background-sejours-extremadura.jpg" alt="" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-noir-profond/80" />
           <div className="relative z-10 text-center px-4">
             <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>

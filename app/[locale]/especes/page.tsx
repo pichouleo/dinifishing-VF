@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { species } from '@/data/species'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,9 +10,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.species' })
   return {
-    title: 'Pêche Black Bass, Brochet, Sandre en Extremadura — Dini Fishing',
-    description: 'Black Bass, Brochet, Sandre et Barbeau Comizo sur les lacs sauvages d\'Extremadura, Espagne. Techniques, comportements et meilleures saisons.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/especes`,
       languages: {
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Espèces de pêche en Extremadura — Dini Fishing',
-      description: 'Pêchez le Black Bass, Brochet, Sandre et Barbeau Comizo en Extremadura, Espagne.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
+      locale,
       images: ['/especes/blackbass.jpg'],
     },
   }
@@ -36,8 +38,8 @@ export default function EspecesPage({ params: { locale } }: Props) {
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <AnimatedSection>
-        <section className="relative py-24 flex items-center justify-center overflow-hidden"
-          style={{ backgroundImage: 'url(/especes/background-especes-poissons.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section className="relative py-24 flex items-center justify-center overflow-hidden">
+          <Image src="/especes/background-especes-poissons.jpg" alt="" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-noir-profond/80" />
           <div className="relative z-10 text-center px-4">
             <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>

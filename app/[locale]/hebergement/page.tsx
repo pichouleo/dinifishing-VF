@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import Image from 'next/image'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { villas } from '@/data/villas'
 import VillaCard from '@/components/VillaCard'
 import Link from 'next/link'
@@ -10,9 +11,10 @@ interface Props { params: { locale: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
+  const m = await getTranslations({ locale, namespace: 'meta.accommodation' })
   return {
-    title: 'Hébergement pêcheurs à Valdecaballeros, Extremadura — Dini Fishing',
-    description: 'Appartement et villa à Valdecaballeros, Extremadura. Hébergements idéaux pour les séjours de pêche aux carnassiers, proches des lacs Garcia Sola et Orellana.',
+    title: m('title'),
+    description: m('description'),
     alternates: {
       canonical: `https://dinifishing.com/${locale}/hebergement`,
       languages: {
@@ -22,8 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: 'Hébergement à Valdecaballeros — Dini Fishing',
-      description: 'Logements de caractère pour pêcheurs à Valdecaballeros, Extremadura. Proches des mises à l\'eau Garcia Sola, Orellana et Cijara.',
+      title: m('ogTitle'),
+      description: m('ogDescription'),
+      locale,
       images: ['/images/hebergement/villa-1.png'],
     },
   }
@@ -36,8 +39,8 @@ export default function HebergementPage({ params: { locale } }: Props) {
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <AnimatedSection>
-        <section className="relative py-24 flex items-center justify-center overflow-hidden"
-          style={{ backgroundImage: 'url(/hebergements/background-hebergements.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section className="relative py-24 flex items-center justify-center overflow-hidden">
+          <Image src="/hebergements/background-hebergements.jpg" alt="" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-noir-profond/80" />
           <div className="relative z-10 text-center px-4">
             <h1 className="font-bebas text-5xl md:text-7xl text-blanc-casse tracking-widest">{t('title')}</h1>

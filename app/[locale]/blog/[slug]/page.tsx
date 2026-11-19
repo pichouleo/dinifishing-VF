@@ -1,5 +1,6 @@
+import { useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
-import { articles } from '@/data/articles'
+import { articles, pick } from '@/data/articles'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -15,9 +16,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articles.find((a) => a.slug === params.slug)
   if (!article) return {}
+  const title = pick(article.title, params.locale)
+  const excerpt = pick(article.excerpt, params.locale)
   return {
-    title: `${article.title} — Dini Fishing`,
-    description: article.excerpt,
+    title: `${title} — Dini Fishing`,
+    description: excerpt,
     alternates: {
       canonical: `https://dinifishing.com/${params.locale}/blog/${params.slug}`,
       languages: {
@@ -27,17 +30,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description: excerpt,
       images: [article.image],
+      locale: params.locale,
+      type: 'article',
     },
   }
 }
 
+const dateLocales: Record<string, string> = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES' }
+
 export default function BlogPostPage({ params }: Props) {
   setRequestLocale(params.locale)
+  const t = useTranslations('blog')
   const article = articles.find((a) => a.slug === params.slug)
   if (!article) notFound()
+
+  const title = pick(article.title, params.locale)
+  const content = pick(article.content, params.locale)
 
   const renderInline = (text: string) => {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
@@ -62,7 +73,11 @@ export default function BlogPostPage({ params }: Props) {
   }
 
   const renderContent = (content: string) => {
-    return content.trim().split('\n\n').map((para, i) => {
+    const blocks = content.trim().split('\n\n')
+    // Chaque article commence par « # Titre », déjà rendu en H1 par l'en-tête de
+    // la page : sans ça le titre s'affiche deux fois et la page a deux H1.
+    if (blocks[0]?.startsWith('# ')) blocks.shift()
+    return blocks.map((para, i) => {
       if (para.startsWith('# ')) return <h1 key={i} className="font-bebas text-4xl text-blanc-casse tracking-widest mt-8 mb-4">{para.slice(2)}</h1>
       if (para.startsWith('## ')) return <h2 key={i} className="font-bebas text-3xl text-rouge-sang tracking-widest mt-8 mb-4">{para.slice(3)}</h2>
       if (para.startsWith('### ')) return <h3 key={i} className="font-bebas text-2xl text-or-mat tracking-widest mt-6 mb-3">{para.slice(4)}</h3>
@@ -95,20 +110,20 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-noir-profond pt-20">
       <div className="relative h-72 md:h-96 overflow-hidden">
-        <Image src={article.image} alt={article.title} fill className="object-cover" />
+        <Image src={article.image} alt={title} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-noir-profond to-transparent" />
       </div>
       <article className="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
         <div className="mb-8">
           <p className="text-or-mat text-xs uppercase tracking-widest mb-3">
-            {new Date(article.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+            {new Date(article.date).toLocaleDateString(dateLocales[params.locale] ?? 'fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
-          <h1 className="font-bebas text-3xl md:text-5xl text-blanc-casse tracking-widest leading-tight">{article.title}</h1>
+          <h1 className="font-bebas text-3xl md:text-5xl text-blanc-casse tracking-widest leading-tight">{title}</h1>
         </div>
-        <div>{renderContent(article.content)}</div>
+        <div>{renderContent(content)}</div>
         <div className="mt-12 pt-8 border-t border-noir-leger flex items-center justify-between">
-          <Link href={`/${params.locale}/blog`} className="text-rouge-sang hover:text-rouge-fonce font-bebas tracking-widest transition-colors">← Retour au blog</Link>
-          <Link href={`/${params.locale}/contact`} className="bg-rouge-sang hover:bg-rouge-fonce text-white font-bebas tracking-widest px-6 py-3 transition-colors">Réserver un séjour</Link>
+          <Link href={`/${params.locale}/blog`} className="text-rouge-sang hover:text-rouge-fonce font-bebas tracking-widest transition-colors">← {t('backToBlog')}</Link>
+          <Link href={`/${params.locale}/contact`} className="bg-rouge-sang hover:bg-rouge-fonce text-white font-bebas tracking-widest px-6 py-3 transition-colors">{t('bookStay')}</Link>
         </div>
       </article>
     </div>

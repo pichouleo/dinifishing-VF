@@ -1,6 +1,18 @@
 import { useTranslations, useLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+// Page de confirmation après envoi du formulaire : sans intérêt pour la recherche,
+// et sans ce bloc elle hérite du canonical de l'accueil défini dans le layout.
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'merci' })
+  return {
+    title: `${t('title')} — Dini Fishing`,
+    robots: { index: false, follow: true },
+    alternates: { canonical: `https://dinifishing.com/${locale}/merci` },
+  }
+}
 
 export default function MerciPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale)
